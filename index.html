@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Muthia Khanza — Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
   <div class="lightbox-inner">
     <button class="lightbox-close" onclick="document.getElementById('lightbox').classList.remove('open')">✕</button>
@@ -33,350 +33,362 @@
   </div>
 </nav>
 
-<div class="hero" style="position:relative;overflow:hidden">
-  <div style="position:absolute;top:-120px;right:-80px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(196,120,143,0.14) 0%,transparent 70%);pointer-events:none"></div>
-  <div style="position:absolute;bottom:-100px;left:-60px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(123,175,212,0.13) 0%,transparent 70%);pointer-events:none"></div>
-  <div class="hero-inner" style="padding-top:5rem">
+<div class="hero">
+  <div class="hero-blob" style="width:480px;height:480px;top:-160px;right:-120px;background:radial-gradient(circle,rgba(124,92,252,.22),transparent 70%)"></div>
+  <div class="hero-blob" style="width:380px;height:380px;bottom:-140px;left:-100px;background:radial-gradient(circle,rgba(255,95,162,.18),transparent 70%)"></div>
+  <div class="hero-blob" style="width:260px;height:260px;top:40%;left:60%;background:radial-gradient(circle,rgba(34,211,238,.16),transparent 70%)"></div>
+  <span class="hero-sparkle" style="top:12%;left:8%;animation-delay:.2s">✦</span>
+  <span class="hero-sparkle" style="top:70%;left:4%;animation-delay:1.4s;color:var(--accent2)">✧</span>
+  <span class="hero-sparkle" style="top:20%;left:92%;animation-delay:.8s;color:var(--accent3)">✦</span>
+  <span class="hero-sparkle" style="top:85%;left:88%;animation-delay:2s;color:var(--amber)">✧</span>
+  <div class="hero-inner">
     <div>
-      <div class="hero-tag">Available for opportunities</div>
-      <h1>Muthia<br><em>Khanza</em></h1>
-      <p class="hero-sub">Fresh graduate in Informatics with a 3.84 GPA — passionate about building robust backend systems, intelligent data pipelines, and AI-powered solutions.</p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn-primary">See My Work</a>
-        <a href="#contact" class="btn-secondary">Get in Touch</a>
+      <!-- <div class="eyebrow reveal in">Open to full-time work</div> -->
+      <h1 class="hero-name reveal in">Muthia<br><em>Khanza</em></h1>
+      <div class="role-line reveal in"><span id="role-text">Backend Developer</span><span class="cursor"></span></div>
+      <p class="hero-sub reveal in">Fresh Informatics graduate who loves building systems that actually work — from backend services and machine learning pipelines to mobile apps real people use.</p>
+      <div class="hero-cta reveal in">
+        <a href="#projects" class="btn-primary">See My Projects →</a>
+        <a href="#contact" class="btn-secondary">Contact Me</a>
       </div>
-      <div class="stat-row">
-        <div class="stat"><div class="stat-num">3.84</div><div class="stat-lbl">GPA</div></div>
-        <div class="stat"><div class="stat-num">7+</div><div class="stat-lbl">Projects</div></div>
-        <div class="stat"><div class="stat-num">2</div><div class="stat-lbl">Internships</div></div>
-      </div>
+      <!-- <div class="stat-row reveal in">
+        <div><div class="stat-num">6+</div><div class="stat-lbl">SYSTEMS & APPS BUILT</div></div>
+        <div><div class="stat-num">95%</div><div class="stat-lbl">AI CLASSIFICATION MODEL ACCURACY</div></div>
+        <div><div class="stat-num">2</div><div class="stat-lbl">GOVERNMENT AGENCY INTERNSHIPS</div></div>
+      </div> -->
     </div>
-    <div class="hero-photo">
-      <img src="data:image/jpeg;base64,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" alt="Muthia Khanza">
+    <div class="hero-photo reveal in">
+      <div class="hero-photo-frame">
+        <img src="image/muthia.jpg" alt="Muthia Khanza" id="hero-photo-img">
+      </div>
+      <!-- <div class="hero-tag-float"><span class="dotpulse"></span> open to work</div> -->
     </div>
   </div>
 </div>
 
 <section id="about">
-  <div class="section-label">About Me</div>
-  <div class="section-title">Who I am</div>
-  <div class="section-desc">A little bit about my background and what drives me.</div>
-  <div class="about-grid">
-    <div class="about-text">
-      <p>I'm Muthia Khanza, a fresh Informatics graduate from Universitas Jenderal Soedirman. My journey in tech spans backend development, machine learning, and data science — shaped by real internships at government institutions and hands-on projects that solve actual problems.</p>
-      <p>During my studies, I interned at BPS Kota Tasikmalaya where I built an AI chatbot for KBLI classification achieving 95% accuracy, and at Diskominfo where I developed a government knowledge management system.</p>
-      <p>I'm a structured thinker who loves turning complex problems into clean, functional solutions — whether that's a Laravel backend, a Python ML pipeline, or a Flutter mobile app.</p>
-    </div>
-    <div class="about-aside">
-      <div class="info-row">
-        <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg></div>
-        <div><div class="info-label">Location</div><div class="info-value">Purwokerto, Jawa Tengah</div></div>
-      </div>
-      <div class="info-row">
-        <div class="info-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-        <div><div class="info-label">Education</div><div class="info-value">S1 Informatika, UNSOED — GPA 3.84</div></div>
-      </div>
-      <div class="info-row">
-        <div class="info-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-        <div><div class="info-label">Status</div><div class="info-value">Open to work — full time</div></div>
-      </div>
-      <div class="info-row">
-        <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-        <div><div class="info-label">Contact</div><div class="info-value">muthiakhanza034@gmail.com</div></div>
+  <div class="wrap">
+    <div class="section-label reveal">About Me</div>
+    <!-- <div class="section-title reveal">Get to Know Me Better</div> -->
+    <div class="about-quote">
+    "I enjoy turning ideas into useful digital solutions."
+</div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+  <p>I'm Muthia Khanza, an Informatics graduate from Universitas Jenderal Soedirman, focused on Backend Development, Data, and Machine Learning. I love turning ideas into apps people actually use.</p>
+ 
+  <p>At <strong>BPS Tasikmalaya City</strong>, I built an AI chatbot for KBLI code classification. At <strong>Diskominfo Tasikmalaya Regency</strong>, I developed a Laravel-based knowledge management system for internal operations.</p>
+ 
+  <p>I work carefully and structured — always understanding the root cause before jumping to a solution. For me, good tech isn't just running, it's maintainable, pleasant to use, and built to grow.</p>
+</div>
+      <div class="about-aside reveal">
+        <div class="info-row">
+          <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg></div>
+          <div><div class="info-label">Location</div><div class="info-value">Purwokerto, Central Java</div></div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <div><div class="info-label">Education</div><div class="info-value">S.Kom. Informatics — UNSOED</div></div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></div>
+          <div><div class="info-label">Focus</div><div class="info-value">Backend · Data & ML · Mobile</div></div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><div class="info-label">Contact</div><div class="info-value">muthiakhanza034@gmail.com</div></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="skills" style="background:var(--surface);max-width:100%;padding:5rem 0">
-  <div style="max-width:1000px;margin:0 auto;padding:0 3rem">
-    <div class="section-label">Skills</div>
-    <div class="section-title">Tech stack</div>
-    <div class="section-desc">Tools and technologies I'm confident working with.</div>
-    <div class="skills-wrap">
-      <div class="skill-badge"><span class="dot"></span>Laravel</div>
-      <div class="skill-badge"><span class="dot"></span>Livewire</div>
-      <div class="skill-badge"><span class="dot"></span>PHP</div>
-      <div class="skill-badge"><span class="dot"></span>Python</div>
-      <div class="skill-badge"><span class="dot"></span>Flask</div>
-      <div class="skill-badge"><span class="dot"></span>Flutter</div>
-      <div class="skill-badge"><span class="dot"></span>Dart</div>
-      <div class="skill-badge"><span class="dot"></span>MySQL</div>
-      <div class="skill-badge"><span class="dot"></span>PostgreSQL</div>
-      <div class="skill-badge"><span class="dot"></span>Firebase</div>
-      <div class="skill-badge"><span class="dot"></span>Git</div>
-      <div class="skill-badge"><span class="dot"></span>GitHub</div>
-      <div class="skill-badge"><span class="dot"></span>Scikit-learn</div>
-      <div class="skill-badge"><span class="dot"></span>Pandas</div>
-      <div class="skill-badge"><span class="dot"></span>NLP</div>
-      <div class="skill-badge"><span class="dot"></span>REST API</div>
+<section id="skills" class="skills-section">
+  <div class="wrap">
+    <div class="section-label reveal">Skills</div>
+    <div class="section-title reveal">Tools</div>
+        <div class="skill-groups">
+      <div class="reveal">
+        <div class="skill-group-title"><span class="num">01</span> Backend & Web</div>
+        <div class="skills-wrap">
+          <div class="skill-badge"><span class="dot"></span>Laravel</div>
+          <div class="skill-badge"><span class="dot"></span>Livewire</div>
+          <div class="skill-badge"><span class="dot"></span>PHP</div>
+          <div class="skill-badge"><span class="dot"></span>Flask</div>
+          <div class="skill-badge"><span class="dot"></span>REST API</div>
+          <div class="skill-badge"><span class="dot"></span>MySQL</div>
+          <div class="skill-badge"><span class="dot"></span>PostgreSQL</div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="skill-group-title"><span class="num">02</span> Mobile</div>
+        <div class="skills-wrap">
+          <div class="skill-badge"><span class="dot"></span>Flutter</div>
+          <div class="skill-badge"><span class="dot"></span>Dart</div>
+          <div class="skill-badge"><span class="dot"></span>Firebase</div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="skill-group-title"><span class="num">03</span> Data & Machine Learning</div>
+        <div class="skills-wrap">
+          <div class="skill-badge"><span class="dot"></span>Python</div>
+          <div class="skill-badge"><span class="dot"></span>Scikit-learn</div>
+          <div class="skill-badge"><span class="dot"></span>Pandas</div>
+          <div class="skill-badge"><span class="dot"></span>NLP</div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="skill-group-title"><span class="num">04</span> Tools</div>
+        <div class="skills-wrap">
+          <div class="skill-badge"><span class="dot"></span>Git</div>
+          <div class="skill-badge"><span class="dot"></span>GitHub</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="projects">
-  <div class="section-label">Projects</div>
-  <div class="section-title">Things I've built</div>
-  <div class="section-desc">A selection of projects from internships, academics, and personal exploration.</div>
-  <div class="projects-grid">
+  <div class="wrap">
+    <div class="section-label reveal">Portfolio</div>
+    <div class="section-title reveal">Things I've Built</div>
+    <div class="section-desc reveal">Pick a category below to see the projects most relevant to you.</div>
 
-    <div class="project-card featured" onclick="openLightbox('image/llm.jpg','AI-Based KBLI Classification System')">
-      <div class="project-thumb">
-        <img src="image/llm.jpg" alt="AI-Based KBLI Classification System">
-        <div class="thumb-overlay"><button class="thumb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button></div>
-      </div>
-      <div class="project-body">
-        <span class="project-badge badge-featured">Featured</span>
-        <div class="project-name">AI-Based KBLI Classification System</div>
-        <div class="project-desc">Built an AI chatbot prototype for 5-digit KBLI business classification with 95% initial accuracy. Developed to support BPS Kota Tasikmalaya's Desa Cantik program for MSME classification at scale.</div>
-        <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">NLP</span><span class="stack-tag">Machine Learning</span></div>
-      </div>
-      <a href="https://github.com/Mut127/chatbot_umkm.git" target="_blank" class="project-github">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
-    </svg>
-    GitHub
-  </a>
+    <div class="filter-bar reveal" id="filter-bar">
+      <div class="filter-highlight" id="filter-highlight"></div>
+      <button class="filter-pill active" data-filter="all">All</button>
+      <button class="filter-pill" data-filter="ml">Machine Learning</button>
+      <button class="filter-pill" data-filter="backend">Backend & Systems</button>
+      <button class="filter-pill" data-filter="mobile">Mobile App</button>
     </div>
 
-    <div class="project-card" onclick="openLightbox('img/project-xmanah.jpg','XMANAH — Info App for Perantau')">
-      <div class="project-thumb">
-        <!-- GANTI: src="img/project-xmanah.jpg" dengan foto screenshot app XMANAH -->
-        <div class="thumb-placeholder">
-          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          <span>Tambahkan foto project</span>
+    <div class="projects-grid" id="projects-grid">
+
+      <div class="project-card featured reveal" data-cat="ml">
+        <div class="project-thumb" onclick="openLightbox('','AI-Based KBLI Classification System')">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#FF5FA2,#C9338E)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+            <span class="thumb-code"><img src="image/llm.jpg" alt="llm"></span>
+          </div>
         </div>
-        <div class="thumb-overlay"><button class="thumb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button></div>
-      </div>
-      <div class="project-body">
-        <span class="project-badge badge-mobile">Mobile App</span>
-        <div class="project-name">XMANAH</div>
-        <div class="project-desc">Mobile app as information hub for newcomers and perantau around Kalimanah — covering kost, warung makan, tempat ibadah, and schools near UNSOED Faculty of Engineering. Led a team as project leader.</div>
-        <div class="project-stack"><span class="stack-tag">Flutter</span><span class="stack-tag">Firebase</span><span class="stack-tag">Dart</span></div>
-      </div>
-      <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
-    </svg>
-    GitHub
-  </a>
-    </div>
-
-    <div class="project-card" onclick="openLightbox('img/project-simpan.jpg','SIMPAN — Government Knowledge Management System')">
-      <div class="project-thumb">
-        <!-- GANTI: src="img/project-simpan.jpg" dengan foto screenshot SIMPAN -->
-        <div class="thumb-placeholder">
-          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          <span>Tambahkan foto project</span>
+        <div class="project-body">
+          <div class="project-top">
+            <span class="project-badge badge-ml">Machine Learning</span>
+            <span class="project-index">ML.01</span>
+          </div>
+          <div class="project-name">AI-Based KBLI Classification System</div>
+          <p class="project-desc">An AI chatbot that automatically classifies 5-digit KBLI business codes with an initial accuracy of 95%. Built to support BPS's Desa Cantik program so thousands of small businesses could be classified faster — no more doing it one by one.</p>
+          <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">NLP</span><span class="stack-tag">Machine Learning</span></div>
+          <a href="https://github.com/Mut127/chatbot_umkm.git" target="_blank" class="project-github">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            View on GitHub
+          </a>
         </div>
-        <div class="thumb-overlay"><button class="thumb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button></div>
       </div>
-      <div class="project-body">
-        <span class="project-badge badge-backend">Backend</span>
-        <div class="project-name">SIMPAN — Government KMS</div>
-        <div class="project-desc">Government Knowledge Management System for Diskominfo Kota Tasikmalaya, now used by 3–5 departments. Improved internal content management efficiency by 40–50% through full CRUD implementation.</div>
-        <div class="project-stack"><span class="stack-tag">Laravel</span><span class="stack-tag">Livewire</span><span class="stack-tag">PHP</span></div>
-      </div>
-      <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
-    </svg>
-    GitHub
-  </a>
-    </div>
 
-    <div class="project-card" onclick="openLightbox('img/project-sentiment.jpg','Sentiment Analysis — Palestine Twitter')">
-      <div class="project-thumb">
-        <!-- GANTI: src="img/project-sentiment.jpg" dengan foto grafik/hasil analisis -->
-        <div class="thumb-placeholder">
-          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          <span>Tambahkan foto project</span>
+      <div class="project-card reveal" data-cat="mobile">
+        <div class="project-thumb" onclick="openLightbox('','CookingKita — Info App for Perantau')">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M12 2 3 21h18L12 2z"/><path d="M12 12v5"/></svg>
+            <span class="thumb-code"><img src="image/cookingprojek.jpg" alt="Cooking Kita"></span>
+          </div>
         </div>
-        <div class="thumb-overlay"><button class="thumb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button></div>
-      </div>
-      <div class="project-body">
-        <span class="project-badge badge-data">Data Science</span>
-        <div class="project-name">Sentiment Analysis — Palestine Twitter</div>
-        <div class="project-desc">Implemented SMOTE-Enhanced Naive Bayes classifier for sentiment analysis of genocide-related discourse on Twitter. Addressed class imbalance with SMOTE to improve minority-class detection accuracy.</div>
-        <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">SMOTE</span><span class="stack-tag">Naive Bayes</span></div>
-      </div>
-      <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
-    </svg>
-    GitHub
-  </a>
-    </div>
-
-    <div class="project-card" onclick="openLightbox('img/project-siperiksa.jpg','SI PERIKSA — Complaint Management System')">
-      <div class="project-thumb">
-        <div class="thumb-placeholder">
-          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          <span>Tambahkan foto project</span>
+        <div class="project-body">
+          <div class="project-top">
+            <span class="project-badge badge-mobile">Website</span>
+            <span class="project-index">Web Statis</span>
+          </div>
+          <div class="project-name">Cooking Kita</div>
+          <p class="project-desc">A mobile app that acts as a "newcomer's map" for students and new arrivals around Kalimanah — helping them find boarding houses, food stalls, places of worship, and nearby schools around UNSOED's Engineering campus. I led this project from start to release.</p>
+          <div class="project-stack"><span class="stack-tag">HTML</span><span class="stack-tag">CSS</span><span class="stack-tag">JavaScript</span></div>
+          <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            View on GitHub
+          </a>
         </div>
-        <div class="thumb-overlay"><button class="thumb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button></div>
       </div>
-      <div class="project-body">
-        <span class="project-badge badge-backend">Backend</span>
-        <div class="project-name">SI PERIKSA</div>
-        <div class="project-desc">Complaint and feedback management system designed to streamline the process of receiving, tracking, and resolving public complaints efficiently.</div>
-        <div class="project-stack"><span class="stack-tag">Laravel</span><span class="stack-tag">PHP</span><span class="stack-tag">MySQL</span></div>
-      </div>
-      <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
-    </svg>
-    GitHub
-  </a>
-    </div>
 
-    <div class="project-card" onclick="openLightbox('img/project-erp.jpg','Employee Management ERP')">
-      <div class="project-thumb">
-        <div class="thumb-placeholder">
-          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          <span>Tambahkan foto project</span>
+      <div class="project-card reveal" data-cat="mobile">
+        <div class="project-thumb" onclick="openLightbox('','XMANAH — Info App for Perantau')">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M12 2 3 21h18L12 2z"/><path d="M12 12v5"/></svg>
+            <span class="thumb-code">flutter run · xmanah</span>
+          </div>
         </div>
-        <div class="thumb-overlay"><button class="thumb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button></div>
+        <div class="project-body">
+          <div class="project-top">
+            <span class="project-badge badge-mobile">Mobile App</span>
+            <span class="project-index">APP.02</span>
+          </div>
+          <div class="project-name">XMANAH</div>
+          <p class="project-desc">A mobile app that acts as a "newcomer's map" for students and new arrivals around Kalimanah — helping them find boarding houses, food stalls, places of worship, and nearby schools around UNSOED's Engineering campus. I led this project from start to release.</p>
+          <div class="project-stack"><span class="stack-tag">Flutter</span><span class="stack-tag">Firebase</span><span class="stack-tag">Dart</span></div>
+          <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            View on GitHub
+          </a>
+        </div>
       </div>
-      <div class="project-body">
-        <span class="project-badge badge-backend">Backend</span>
-        <div class="project-name">Employee Management ERP</div>
-        <div class="project-desc">Built backend for an ERP-style employee management system covering attendance, roles, and organizational workflows. Focused on clean data structure and reliable API design.</div>
-        <div class="project-stack"><span class="stack-tag">Laravel</span><span class="stack-tag">PHP</span><span class="stack-tag">MySQL</span></div>
-      </div>
-      <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
-    </svg>
-    GitHub
-  </a>
-    </div>
 
+      <div class="project-card reveal" data-cat="backend">
+        <div class="project-thumb" onclick="openLightbox('','SIMPAN — Government Knowledge Management System')">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 4v16"/></svg>
+            <span class="thumb-code">SIMPAN · Diskominfo</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <span class="project-badge badge-backend">Backend & Sistem</span>
+            <span class="project-index">SYS.03</span>
+          </div>
+          <div class="project-name">SIMPAN — Government KMS</div>
+          <p class="project-desc">A knowledge management system for Diskominfo Tasikmalaya City that is now actively used by 3-5 divisions. Full CRUD functionality that made internal workflows 40-50% more efficient.</p>
+          <div class="project-stack"><span class="stack-tag">Laravel</span><span class="stack-tag">Livewire</span><span class="stack-tag">PHP</span></div>
+          <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="ml">
+        <div class="project-thumb" onclick="openLightbox('','Sentiment Analysis — Palestine Twitter')">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#FFC857,#E08A1E)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+            <span class="thumb-code">sentiment_model.ipynb</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <span class="project-badge badge-ml">Machine Learning</span>
+            <span class="project-index">ML.04</span>
+          </div>
+          <div class="project-name">Sentiment Analysis — Palestine Twitter</div>
+          <p class="project-desc">A Naive Bayes model enhanced with SMOTE for sentiment analysis of thousands of tweets about the genocide in Palestine. SMOTE was used to handle imbalanced data so the model wouldn't be blind to minority classes.</p>
+          <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">SMOTE</span><span class="stack-tag">Naive Bayes</span></div>
+          <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="backend">
+        <div class="project-thumb" onclick="openLightbox('','SI PERIKSA — Complaint Management System')">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+            <span class="thumb-code">SI PERIKSA</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <span class="project-badge badge-backend">Backend & Sistem</span>
+            <span class="project-index">SYS.05</span>
+          </div>
+          <div class="project-name">SI PERIKSA</div>
+          <p class="project-desc">A complaint management system that keeps public complaints from getting stuck halfway — from submission, to tracking, to resolution, with a clear workflow throughout.</p>
+          <div class="project-stack"><span class="stack-tag">Laravel</span><span class="stack-tag">PHP</span><span class="stack-tag">MySQL</span></div>
+          <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="backend">
+        <div class="project-thumb" onclick="openLightbox('','Employee Management ERP')">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="9" cy="7" r="3"/><path d="M2 21v-1a6 6 0 0 1 6-6"/><circle cx="17" cy="9" r="2.5"/><path d="M14 21v-1a5 5 0 0 1 8-4"/></svg>
+            <span class="thumb-code">employee_erp/api</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <span class="project-badge badge-backend">Backend & Sistem</span>
+            <span class="project-index">SYS.06</span>
+          </div>
+          <div class="project-name">Employee Management ERP</div>
+          <p class="project-desc">Backend for an ERP-style employee management system — attendance, roles, and organizational workflows. Focused on clean data structures and a reliable API.</p>
+          <div class="project-stack"><span class="stack-tag">Laravel</span><span class="stack-tag">PHP</span><span class="stack-tag">MySQL</span></div>
+          <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
-<section id="experience" style="background:var(--surface);max-width:100%;padding:5rem 0">
-  <div style="max-width:1000px;margin:0 auto;padding:0 3rem">
-    <div class="section-label">Experience</div>
-    <div class="section-title">Where I've worked</div>
-    <div class="section-desc">Internships where I built real systems used by real people.</div>
+<section id="experience" class="skills-section">
+  <div class="wrap">
+    <div class="section-label reveal">Experience</div>
+    <div class="section-title reveal">Where I've Worked</div>
+    <div class="section-desc reveal">Two government internships, two systems that are actually in use.</div>
+
     <div class="exp-list">
-
-      <div class="exp-card">
-        <!-- GANTI: src="img/exp-bps.jpg" dengan foto kegiatan magang di BPS -->
-        <div class="exp-photo" onclick="openLightbox('img/exp-bps.jpg','Internship at Badan Pusat Statistik Kota Tasikmalaya')">
-          <div class="thumb-placeholder" style="height:140px">
-            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            <span>Tambahkan foto kegiatan</span>
-          </div>
-          <div class="thumb-overlay"><button class="thumb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button></div>
-        </div>
-        <div class="exp-body">
-          <div class="exp-dot"></div>
-          <div>
-            <div class="exp-period">Jul 2025 – Sep 2025</div>
-            <div class="exp-role">Data Scientist Intern</div>
-            <div class="exp-company">Badan Pusat Statistik — Kota Tasikmalaya</div>
-            <ul class="exp-items">
-              <li>Built AI chatbot for KBLI classification with 95% accuracy to support Desa Cantik program</li>
-              <li>Processed and visualized large-scale regional statistical datasets for official BPS publications</li>
-              <li>Contributed to 2026 Economic Census data preparation — verified thousands of MSME records</li>
-            </ul>
-          </div>
+      <div class="exp-card reveal">
+        <div class="exp-rail"><div class="exp-dot"></div></div>
+        <div>
+          <div class="exp-period">JUL 2025 – SEP 2025</div>
+          <div class="exp-role">Data Scientist Intern</div>
+          <div class="exp-company">Statistics Indonesia (BPS) — Tasikmalaya City</div>
+          <ul class="exp-items">
+            <li>Built an AI chatbot for KBLI classification with 95% accuracy to support the Desa Cantik program</li>
+            <li>Processed and visualized large-scale regional statistical data for official BPS publications</li>
+            <li>Helped prepare data for the 2026 Economic Census — verifying thousands of business records</li>
+          </ul>
         </div>
       </div>
 
-      <div class="exp-card">
-        <!-- GANTI: src="img/exp-diskominfo.jpg" dengan foto kegiatan magang di Diskominfo -->
-        <div class="exp-photo" onclick="openLightbox('img/exp-diskominfo.jpg','Internship at Diskominfo Kota Tasikmalaya')">
-          <div class="thumb-placeholder" style="height:140px">
-            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            <span>Tambahkan foto kegiatan</span>
-          </div>
-          <div class="thumb-overlay"><button class="thumb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button></div>
-        </div>
-        <div class="exp-body">
-          <div class="exp-dot"></div>
-          <div>
-            <div class="exp-period">Jul 2024 – Aug 2024</div>
-            <div class="exp-role">Backend Developer & Data Scientist Intern</div>
-            <div class="exp-company">Dinas Komunikasi dan Informatika — Kota Tasikmalaya</div>
-            <ul class="exp-items">
-              <li>Developed SIMPAN — a government KMS now adopted by 3–5 departments within Diskominfo</li>
-              <li>Improved internal content management efficiency by 40–50% through full CRUD development</li>
-              <li>Built on Laravel and Livewire; contributed to SPBE-based knowledge management architecture</li>
-            </ul>
-          </div>
+      <div class="exp-card reveal">
+        <div class="exp-rail"><div class="exp-dot"></div></div>
+        <div>
+          <div class="exp-period">JUL 2024 – AGU 2024</div>
+          <div class="exp-role">Backend Developer & Data Scientist Intern</div>
+          <div class="exp-company">Department of Communication & Informatics — Tasikmalaya City</div>
+          <ul class="exp-items">
+            <li>Built SIMPAN — a government KMS now used by 3-5 divisions at Diskominfo</li>
+            <li>Improved internal content management efficiency by 40-50% through full CRUD development</li>
+            <li>Built with Laravel & Livewire; contributed to the SPBE (e-government) architecture</li>
+          </ul>
         </div>
       </div>
-
     </div>
 
-    <div style="margin-top:3rem">
-      <div class="section-label" style="margin-bottom:1rem">Organisation</div>
+    <div style="margin-top:3.4rem">
+      <div class="section-label reveal" style="margin-bottom:1rem">Beyond Coding</div>
       <div class="org-grid">
-
-        <div class="org-card" onclick="openLightbox('img/org-stech.jpg','Vice Chief Executive — Soedirman Technophoria 2023')">
-          <!-- GANTI: img/org-stech.jpg dengan foto kegiatan S-TECH -->
-          <div class="org-thumb">
-            <div class="thumb-placeholder" style="height:120px">
-              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-              <span>Tambahkan foto</span>
-            </div>
-            <div class="thumb-overlay"><button class="thumb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button></div>
-          </div>
-          <div class="org-body">
-            <div class="org-role">Vice Chief Executive</div>
-            <div class="org-org">Soedirman Technophoria (S-TECH) 2023</div>
-            <div class="org-period">Sep – Nov 2023</div>
-            <div class="org-desc">Led 30+ members, organized Web Programming Competition & UI/UX Seminar attracting 100+ participants.</div>
-          </div>
+        <div class="org-card reveal">
+          <div class="org-role">Vice Chief Executive</div>
+          <div class="org-org">Soedirman Technophoria (S-TECH) 2023</div>
+          <div class="org-period">SEP – NOV 2023</div>
+          <div class="org-desc">Led 30+ members, organized a Web Programming Competition & UI/UX Seminar with 100+ participants.</div>
         </div>
-
-        <div class="org-card" onclick="openLightbox('img/org-hmif.jpg','ILTEK Division Staff — HMIF UNSOED')">
-          <!-- GANTI: img/org-hmif.jpg dengan foto kegiatan HMIF -->
-          <div class="org-thumb">
-            <div class="thumb-placeholder" style="height:120px">
-              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-              <span>Tambahkan foto</span>
-            </div>
-            <div class="thumb-overlay"><button class="thumb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button></div>
-          </div>
-          <div class="org-body">
-            <div class="org-role">ILTEK Division Staff</div>
-            <div class="org-org">HMIF UNSOED</div>
-            <div class="org-period">Mar 2023 – Jan 2024</div>
-            <div class="org-desc">Supported Soedirman Technophoria 2023. Ensured 90%+ programs completed on schedule.</div>
-          </div>
+        <div class="org-card reveal">
+          <div class="org-role">ILTEK Division Staff</div>
+          <div class="org-org">HMIF UNSOED</div>
+          <div class="org-period">MAR 2023 – JAN 2024</div>
+          <div class="org-desc">Supported Soedirman Technophoria 2023, keeping 90%+ of programs running on schedule.</div>
         </div>
-
-        <div class="org-card" onclick="openLightbox('img/org-mentor.jpg','Group Mentor — Informatics Orientation Program')">
-          <!-- GANTI: img/org-mentor.jpg dengan foto kegiatan mentoring -->
-          <div class="org-thumb">
-            <div class="thumb-placeholder" style="height:120px">
-              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-              <span>Tambahkan foto</span>
-            </div>
-            <div class="thumb-overlay"><button class="thumb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button></div>
-          </div>
-          <div class="org-body">
-            <div class="org-role">Group Mentor</div>
-            <div class="org-org">Informatics Orientation Program</div>
-            <div class="org-period">Aug – Dec 2024</div>
-            <div class="org-desc">Mentored ~20 freshmen in adapting to academic and social environments at UNSOED.</div>
-          </div>
+        <div class="org-card reveal">
+          <div class="org-role">Group Mentor</div>
+          <div class="org-org">Informatics Orientation Program</div>
+          <div class="org-period">AUG – DEC 2024</div>
+          <div class="org-desc">Mentored ~20 new students in adjusting to academic and social life at UNSOED.</div>
         </div>
-
       </div>
     </div>
   </div>
 </section>
 
-<section id="contact">
-  <div class="contact-wrap">
+<section id="contact" class="contact-section">
+  <div class="contact-wrap reveal">
     <div>
-      <h2>Let's work together</h2>
-      <p>I'm open to backend developer, data scientist, or ML engineer roles. Feel free to reach out!</p>
+      <h2>Let's talk.</h2>
+      <p>I'm open to backend developer, data scientist, or ML engineer roles. If we sound like a good fit, don't hesitate to reach out!</p>
     </div>
     <div class="contact-links">
       <a href="mailto:muthiakhanza034@gmail.com" class="contact-link">
@@ -387,16 +399,12 @@
         <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
         linkedin.com/in/muthia-khanza
       </a>
-      <a href="tel:+6285871431539" class="contact-link">
-        <svg viewBox="0 0 24 24"><path d="M22 16.92V19.92C22 20.48 21.55 21 21 21 10.4 21 2 12.6 2 2.04A1 1 0 0 1 3 3h3c.55 0 1 .4 1.08.94.15 1 .4 1.95.74 2.84a1 1 0 0 1-.23 1.06L6.09 9.34C7.89 12.46 10.54 15 13.66 16.91l1.5-1.5a1 1 0 0 1 1.06-.23c.89.34 1.84.59 2.84.74.55.08.94.54.94 1z"/></svg>
-        +62 858-7143-1539
-      </a>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Muthia Khanza — Purwokerto, Indonesia</p>
+  <p>© 2026 MUTHIA KHANZA — PURWOKERTO, INDONESIA</p>
 </footer>
 
 <script src="script.js"></script>
