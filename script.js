@@ -15,7 +15,7 @@
   });
 
   // Role rotator
-  const roles = ["Backend Developer", "Data Scientist", "ML Enthusiast", "Mobile Developer"];
+  const roles = ["AI Enthusiast", "Backend Developer", "Data Scientist", "Design System"];
   let roleIdx = 0;
   const roleText = document.getElementById('role-text');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -48,8 +48,10 @@
   const cards = document.querySelectorAll('.project-card');
 
   function moveHighlight(pill) {
+    if (!pill) return;
     highlight.style.width = pill.offsetWidth + 'px';
-    highlight.style.transform = `translateX(${pill.offsetLeft - 5}px)`;
+    highlight.style.height = pill.offsetHeight + 'px';
+    highlight.style.transform = `translate(${pill.offsetLeft - 5}px, ${pill.offsetTop - 5}px)`;
   }
   window.addEventListener('load', () => moveHighlight(document.querySelector('.filter-pill.active')));
   window.addEventListener('resize', () => moveHighlight(document.querySelector('.filter-pill.active')));

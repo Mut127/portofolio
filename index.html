@@ -19,11 +19,13 @@
   </div>
 </div>
 
-<nav>
-  <div class="nav-logo">MK</div>
-  <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
-    <span></span><span></span><span></span>
-  </button>
+<div class="nav-wrap">
+  <nav>
+    <div class="nav-logo">MK</div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
   <div class="nav-links" id="nav-links">
     <a href="#about" class="nav-close-link">About</a>
     <a href="#skills" class="nav-close-link">Skills</a>
@@ -31,7 +33,7 @@
     <a href="#experience" class="nav-close-link">Experience</a>
     <a href="#contact" class="nav-close-link">Contact</a>
   </div>
-</nav>
+</div>
 
 <div class="hero">
   <div class="hero-blob" style="width:480px;height:480px;top:-160px;right:-120px;background:radial-gradient(circle,rgba(124,92,252,.22),transparent 70%)"></div>
@@ -45,8 +47,8 @@
     <div>
       <!-- <div class="eyebrow reveal in">Open to full-time work</div> -->
       <h1 class="hero-name reveal in">Muthia<br><em>Khanza</em></h1>
-      <div class="role-line reveal in"><span id="role-text">Backend Developer</span><span class="cursor"></span></div>
-      <p class="hero-sub reveal in">Fresh Informatics graduate who loves building systems that actually work — from backend services and machine learning pipelines to mobile apps real people use.</p>
+      <div class="role-line reveal in"><span id="role-text">AI Enthusiast</span><span class="cursor"></span></div>
+      <p class="hero-sub reveal in">Fresh Informatics graduate passionate about artificial intelligence, backend engineering, and system design, building intelligent, scalable, and reliable software for real-world problems.</p>
       <div class="hero-cta reveal in">
         <a href="#projects" class="btn-primary">See My Projects →</a>
         <a href="#contact" class="btn-secondary">Contact Me</a>
@@ -58,8 +60,8 @@
       </div> -->
     </div>
     <div class="hero-photo reveal in">
-      <div class="hero-photo-frame">
-        <img src="image/muthia.jpg" alt="Muthia Khanza" id="hero-photo-img">
+      <div>
+        <img src="image/14.png" alt="Muthia Khanza" id="hero-photo-img">
       </div>
       <!-- <div class="hero-tag-float"><span class="dotpulse"></span> open to work</div> -->
     </div>
@@ -75,11 +77,11 @@
 </div>
     <div class="about-grid">
       <div class="about-text reveal">
-  <p>I'm Muthia Khanza, an Informatics graduate from Universitas Jenderal Soedirman, focused on Backend Development, Data, and Machine Learning. I love turning ideas into apps people actually use.</p>
+  <p>I'm Muthia Khanza, an Informatics graduate from Universitas Jenderal Soedirman, focused on Artificial Intelligence, System Design, Backend Development, Data, and Machine Learning. I love turning ideas into apps people actually use.</p>
  
   <p>At <strong>BPS Tasikmalaya City</strong>, I built an AI chatbot for KBLI code classification. At <strong>Diskominfo Tasikmalaya Regency</strong>, I developed a Laravel-based knowledge management system for internal operations.</p>
  
-  <p>I work carefully and structured — always understanding the root cause before jumping to a solution. For me, good tech isn't just running, it's maintainable, pleasant to use, and built to grow.</p>
+  <p>I work carefully and structured always understanding the root cause before jumping to a solution. For me, good tech isn't just running, it's maintainable, pleasant to use, and built to grow.</p>
 </div>
       <div class="about-aside reveal">
         <div class="info-row">
@@ -92,7 +94,7 @@
         </div>
         <div class="info-row">
           <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></div>
-          <div><div class="info-label">Focus</div><div class="info-value">Backend · Data & ML · Mobile</div></div>
+          <div><div class="info-label">Focus</div><div class="info-value">AI Enthusiast · Backend · Data & ML · System Design</div></div>
         </div>
         <div class="info-row">
           <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
@@ -157,26 +159,25 @@
     <div class="filter-bar reveal" id="filter-bar">
       <div class="filter-highlight" id="filter-highlight"></div>
       <button class="filter-pill active" data-filter="all">All</button>
-      <button class="filter-pill" data-filter="ml">Machine Learning</button>
-      <button class="filter-pill" data-filter="backend">Backend & Systems</button>
+      <button class="filter-pill" data-filter="ml">AI & Machine Learning</button>
+      <button class="filter-pill" data-filter="backend">Backend</button>
       <button class="filter-pill" data-filter="mobile">Mobile App</button>
+      <button class="filter-pill" data-filter="design">Design System</button>
     </div>
 
     <div class="projects-grid" id="projects-grid">
-
-      <div class="project-card featured reveal" data-cat="ml">
-        <div class="project-thumb" onclick="openLightbox('','AI-Based KBLI Classification System')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#FF5FA2,#C9338E)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-            <span class="thumb-code"><img src="image/llm.jpg" alt="llm"></span>
+      <div class="project-card reveal" data-cat="ml">
+        <div class="project-thumb" onclick="openLightbox('','Implementasi Chatbot dengan Metode IndoBERT untuk Prediksi Kode KBLI 5 Digit pada UMKM Berbasis Website')">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
+            <span class="thumb-code"><img src="image/1.jpg" alt="llm"></span>
           </div>
         </div>
         <div class="project-body">
           <div class="project-top">
-            <span class="project-badge badge-ml">Machine Learning</span>
+           <span class="project-badge badge-ml">AI & Machine Learning</span>
             <span class="project-index">ML.01</span>
           </div>
-          <div class="project-name">AI-Based KBLI Classification System</div>
+          <div class="project-name">Implementasi Chatbot dengan Metode IndoBERT untuk Prediksi Kode KBLI 5 Digit pada UMKM Berbasis Website</div>
           <p class="project-desc">An AI chatbot that automatically classifies 5-digit KBLI business codes with an initial accuracy of 95%. Built to support BPS's Desa Cantik program so thousands of small businesses could be classified faster — no more doing it one by one.</p>
           <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">NLP</span><span class="stack-tag">Machine Learning</span></div>
           <a href="https://github.com/Mut127/chatbot_umkm.git" target="_blank" class="project-github">
@@ -186,19 +187,103 @@
         </div>
       </div>
 
-      <div class="project-card reveal" data-cat="mobile">
-        <div class="project-thumb" onclick="openLightbox('','CookingKita — Info App for Perantau')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M12 2 3 21h18L12 2z"/><path d="M12 12v5"/></svg>
-            <span class="thumb-code"><img src="image/cookingprojek.jpg" alt="Cooking Kita"></span>
+      <div class="project-card reveal" data-cat="ml">
+        <div class="project-thumb" onclick="openLightbox('','Building AI Agents with n8n (Collaborative Project)')">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">           
+           <span class="thumb-code"><img src="image/11.jpg" alt="llm"></span>
           </div>
         </div>
         <div class="project-body">
           <div class="project-top">
-            <span class="project-badge badge-mobile">Website</span>
+           <span class="project-badge badge-ml">AI & Machine Learning</span>
+            <span class="project-index">ML.01</span>
+          </div>
+          <div class="project-name">Building AI Agents with n8n (Collaborative Project)</div>
+          <p class="project-desc">A collaborative project to build AI agents using n8n, focusing on automating workflows and integrating various tools and services.</p>
+          <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">NLP</span><span class="stack-tag">Machine Learning</span></div>
+          <a href="https://github.com/Mut127/chatbot_umkm.git" target="_blank" class="project-github">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+      
+      <div class="project-card reveal" data-cat="backend"> 
+        <div class="project-thumb" onclick="openLightbox('','CookingKita — Info App for Perantau')">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
+            <span class="thumb-code"><img src="image/2.jpg" alt="Cooking Kita"></span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <span class="project-badge badge-backend">Website</span>
             <span class="project-index">Web Statis</span>
           </div>
           <div class="project-name">Cooking Kita</div>
+          <p class="project-desc">A knowledge management system for Diskominfo Tasikmalaya City that is now actively used by 3-5 divisions. Full CRUD functionality that made internal workflows 40-50% more efficient.</p>
+          <div class="project-stack"><span class="stack-tag">Laravel</span><span class="stack-tag">Livewire</span><span class="stack-tag">PHP</span></div>
+          <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+
+      <div class="project-card reveal" data-cat="design">
+        <div class="project-thumb" onclick="openLightbox('','Design System for SIMPAN')">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
+            <span class="thumb-code"><img src="image/4.jpg" alt="Design System for SIMPAN"></span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <span class="project-badge badge-mobile">Design System</span>
+            <span class="project-index">Design System</span>
+          </div>
+          <div class="project-name">Design System for SIMPAN</div>
+          <p class="project-desc">A mobile app that acts as a "newcomer's map" for students and new arrivals around Kalimanah — helping them find boarding houses, food stalls, places of worship, and nearby schools around UNSOED's Engineering campus. I led this project from start to release.</p>
+          <div class="project-stack"><span class="stack-tag">HTML</span><span class="stack-tag">CSS</span><span class="stack-tag">JavaScript</span></div>
+          <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="design">
+        <div class="project-thumb" onclick="openLightbox('','Design System for SI Periksa')">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
+            <span class="thumb-code"><img src="image/7.jpg" alt="Design System for SI Periksa"></span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <span class="project-badge badge-mobile">Design System</span>
+            <span class="project-index">Design System</span>
+          </div>
+          <div class="project-name">Design System for SI Periksa</div>
+          <p class="project-desc">A mobile app that acts as a "newcomer's map" for students and new arrivals around Kalimanah — helping them find boarding houses, food stalls, places of worship, and nearby schools around UNSOED's Engineering campus. I led this project from start to release.</p>
+          <div class="project-stack"><span class="stack-tag">HTML</span><span class="stack-tag">CSS</span><span class="stack-tag">JavaScript</span></div>
+          <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+       <div class="project-card reveal" data-cat="design">
+        <div class="project-thumb" onclick="openLightbox('','Design System for XMANAH')">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
+            <span class="thumb-code"><img src="image/9.jpg" alt="Design System for XMANAH"></span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <span class="project-badge badge-mobile">Design System</span>
+            <span class="project-index">Design System</span>
+          </div>
+          <div class="project-name">Design System for SI XMANAH</div>
           <p class="project-desc">A mobile app that acts as a "newcomer's map" for students and new arrivals around Kalimanah — helping them find boarding houses, food stalls, places of worship, and nearby schools around UNSOED's Engineering campus. I led this project from start to release.</p>
           <div class="project-stack"><span class="stack-tag">HTML</span><span class="stack-tag">CSS</span><span class="stack-tag">JavaScript</span></div>
           <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
@@ -211,8 +296,7 @@
       <div class="project-card reveal" data-cat="mobile">
         <div class="project-thumb" onclick="openLightbox('','XMANAH — Info App for Perantau')">
           <div class="thumb-art" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M12 2 3 21h18L12 2z"/><path d="M12 12v5"/></svg>
-            <span class="thumb-code">flutter run · xmanah</span>
+            <span class="thumb-code"><img src="image/10.jpg" alt="XMANAH"></span>
           </div>
         </div>
         <div class="project-body">
@@ -230,16 +314,15 @@
         </div>
       </div>
 
-      <div class="project-card reveal" data-cat="backend">
+      <div class="project-card reveal" data-cat="backend"> 
         <div class="project-thumb" onclick="openLightbox('','SIMPAN — Government Knowledge Management System')">
           <div class="thumb-art" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 4v16"/></svg>
-            <span class="thumb-code">SIMPAN · Diskominfo</span>
+            <span class="thumb-code"><img src="image/5.jpg" alt="SIMPAN"></span>
           </div>
         </div>
         <div class="project-body">
           <div class="project-top">
-            <span class="project-badge badge-backend">Backend & Sistem</span>
+            <span class="project-badge badge-backend">Backend</span>
             <span class="project-index">SYS.03</span>
           </div>
           <div class="project-name">SIMPAN — Government KMS</div>
@@ -252,11 +335,10 @@
         </div>
       </div>
 
-      <div class="project-card reveal" data-cat="ml">
+      <div class="project-card reveal" data-cat="ml"> 
         <div class="project-thumb" onclick="openLightbox('','Sentiment Analysis — Palestine Twitter')">
           <div class="thumb-art" style="background:linear-gradient(135deg,#FFC857,#E08A1E)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
-            <span class="thumb-code">sentiment_model.ipynb</span>
+            <span class="thumb-code"><img src="image/3.jpg" alt="Sentiment Analysis"></span>
           </div>
         </div>
         <div class="project-body">
@@ -274,16 +356,37 @@
         </div>
       </div>
 
-      <div class="project-card reveal" data-cat="backend">
-        <div class="project-thumb" onclick="openLightbox('','SI PERIKSA — Complaint Management System')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
-            <span class="thumb-code">SI PERIKSA</span>
+      
+      <div class="project-card reveal" data-cat="ml"> 
+        <div class="project-thumb" onclick="openLightbox('','Sentiment Analysis — Pelantikan Presiden RI 2024 di Aplikasi X')">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#FFC857,#E08A1E)">
+            <span class="thumb-code"><img src="image/8.jpg" alt="Sentiment Analysis"></span>
           </div>
         </div>
         <div class="project-body">
           <div class="project-top">
-            <span class="project-badge badge-backend">Backend & Sistem</span>
+            <span class="project-badge badge-ml">Machine Learning</span>
+            <span class="project-index">ML.04</span>
+          </div>
+          <div class="project-name">Sentiment Analysis — Pelantikan Presiden RI 2024 di Aplikasi X</div>
+          <p class="project-desc">A Naive Bayes model enhanced with SMOTE for sentiment analysis of thousands of tweets about the genocide in Palestine. SMOTE was used to handle imbalanced data so the model wouldn't be blind to minority classes.</p>
+          <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">SMOTE</span><span class="stack-tag">Naive Bayes</span></div>
+          <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="backend"> 
+        <div class="project-thumb" onclick="openLightbox('','SI PERIKSA — Complaint Management System')">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
+            <span class="thumb-code"><img src="image/6.jpg" alt="SI PERIKSA"></span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <span class="project-badge badge-backend">Backend </span>
             <span class="project-index">SYS.05</span>
           </div>
           <div class="project-name">SI PERIKSA</div>
@@ -296,16 +399,15 @@
         </div>
       </div>
 
-      <div class="project-card reveal" data-cat="backend">
+      <div class="project-card reveal" data-cat="backend"> 
         <div class="project-thumb" onclick="openLightbox('','Employee Management ERP')">
           <div class="thumb-art" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="9" cy="7" r="3"/><path d="M2 21v-1a6 6 0 0 1 6-6"/><circle cx="17" cy="9" r="2.5"/><path d="M14 21v-1a5 5 0 0 1 8-4"/></svg>
-            <span class="thumb-code">employee_erp/api</span>
+            <span class="thumb-code"><img src="image/12.jpg" alt="SI PERIKSA"></span>
           </div>
         </div>
         <div class="project-body">
           <div class="project-top">
-            <span class="project-badge badge-backend">Backend & Sistem</span>
+            <span class="project-badge badge-backend">Backend</span>
             <span class="project-index">SYS.06</span>
           </div>
           <div class="project-name">Employee Management ERP</div>
@@ -332,6 +434,13 @@
       <div class="exp-card reveal">
         <div class="exp-rail"><div class="exp-dot"></div></div>
         <div>
+          <div class="exp-media" onclick="openLightbox('image/bps.jpg','Statistics Indonesia (BPS) — Tasikmalaya City')">
+            <img src="image/bps.jpg" alt="Statistics Indonesia (BPS) — Tasikmalaya City" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="exp-media-fallback" style="background:linear-gradient(135deg,#FF5FA2,#C9338E)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+              <span>BPS Tasikmalaya City</span>
+            </div>
+          </div>
           <div class="exp-period">JUL 2025 – SEP 2025</div>
           <div class="exp-role">Data Scientist Intern</div>
           <div class="exp-company">Statistics Indonesia (BPS) — Tasikmalaya City</div>
@@ -346,6 +455,13 @@
       <div class="exp-card reveal">
         <div class="exp-rail"><div class="exp-dot"></div></div>
         <div>
+          <div class="exp-media" onclick="openLightbox('image/diskominfo.jpg','Department of Communication & Informatics — Tasikmalaya City')">
+            <img src="image/diskominfo.jpg" alt="Department of Communication & Informatics — Tasikmalaya City" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="exp-media-fallback" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 4v16"/></svg>
+              <span>Diskominfo Tasikmalaya</span>
+            </div>
+          </div>
           <div class="exp-period">JUL 2024 – AGU 2024</div>
           <div class="exp-role">Backend Developer & Data Scientist Intern</div>
           <div class="exp-company">Department of Communication & Informatics — Tasikmalaya City</div>
@@ -362,18 +478,36 @@
       <div class="section-label reveal" style="margin-bottom:1rem">Beyond Coding</div>
       <div class="org-grid">
         <div class="org-card reveal">
+          <div class="org-media" onclick="openLightbox('image/stech.jpg','Soedirman Technophoria (S-TECH) 2023')">
+            <img src="image/stech.jpg" alt="Soedirman Technophoria (S-TECH) 2023" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="org-media-fallback" style="background:linear-gradient(135deg,#FFC857,#E08A1E)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+            </div>
+          </div>
           <div class="org-role">Vice Chief Executive</div>
           <div class="org-org">Soedirman Technophoria (S-TECH) 2023</div>
           <div class="org-period">SEP – NOV 2023</div>
           <div class="org-desc">Led 30+ members, organized a Web Programming Competition & UI/UX Seminar with 100+ participants.</div>
         </div>
         <div class="org-card reveal">
+          <div class="org-media" onclick="openLightbox('image/hmif.jpg','HMIF UNSOED')">
+            <img src="image/hmif.jpg" alt="HMIF UNSOED" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="org-media-fallback" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="9" cy="7" r="3"/><path d="M2 21v-1a6 6 0 0 1 6-6"/><circle cx="17" cy="9" r="2.5"/><path d="M14 21v-1a5 5 0 0 1 8-4"/></svg>
+            </div>
+          </div>
           <div class="org-role">ILTEK Division Staff</div>
           <div class="org-org">HMIF UNSOED</div>
           <div class="org-period">MAR 2023 – JAN 2024</div>
           <div class="org-desc">Supported Soedirman Technophoria 2023, keeping 90%+ of programs running on schedule.</div>
         </div>
         <div class="org-card reveal">
+          <div class="org-media" onclick="openLightbox('image/mentoring.jpg','Informatics Orientation Program')">
+            <img src="image/mentoring.jpg" alt="Informatics Orientation Program" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="org-media-fallback" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+            </div>
+          </div>
           <div class="org-role">Group Mentor</div>
           <div class="org-org">Informatics Orientation Program</div>
           <div class="org-period">AUG – DEC 2024</div>
@@ -404,7 +538,7 @@
 </section>
 
 <footer>
-  <p>© 2026 MUTHIA KHANZA — PURWOKERTO, INDONESIA</p>
+  <p>© 2026 MUTHIA KHANZA - INDONESIA</p>
 </footer>
 
 <script src="script.js"></script>
