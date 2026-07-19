@@ -15,7 +15,7 @@
   });
 
   // Role rotator
-  const roles = ["AI Enthusiast", "Backend Developer", "Data Scientist", "Design System"];
+  const roles = ["AI Enthusiast", "Backend Developer", "Data Scientist", "System Designer"];
   let roleIdx = 0;
   const roleText = document.getElementById('role-text');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -46,6 +46,12 @@
   const highlight = document.getElementById('filter-highlight');
   const pills = document.querySelectorAll('.filter-pill');
   const cards = document.querySelectorAll('.project-card');
+
+  document.querySelectorAll('.project-desc').forEach(desc => {
+    desc.addEventListener('click', () => {
+      desc.classList.toggle('expanded');
+    });
+  });
 
   function moveHighlight(pill) {
     if (!pill) return;

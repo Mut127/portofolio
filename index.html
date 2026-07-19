@@ -162,23 +162,25 @@
       <button class="filter-pill" data-filter="ml">AI & Machine Learning</button>
       <button class="filter-pill" data-filter="backend">Backend</button>
       <button class="filter-pill" data-filter="mobile">Mobile App</button>
-      <button class="filter-pill" data-filter="design">Design System</button>
+      <button class="filter-pill" data-filter="design">System Design</button>
     </div>
 
     <div class="projects-grid" id="projects-grid">
+
+      <!-- ML.01 -->
       <div class="project-card reveal" data-cat="ml">
         <div class="project-thumb" onclick="openLightbox('','Implementasi Chatbot dengan Metode IndoBERT untuk Prediksi Kode KBLI 5 Digit pada UMKM Berbasis Website')">
           <div class="thumb-art" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
-            <span class="thumb-code"><img src="image/1.jpg" alt="llm"></span>
+            <span class="thumb-code"><img src="image/1.jpg" alt="Chatbot KBLI IndoBERT"></span>
           </div>
         </div>
         <div class="project-body">
           <div class="project-top">
-           <span class="project-badge badge-ml">AI & Machine Learning</span>
+            <span class="project-badge badge-ml">AI & Machine Learning</span>
             <span class="project-index">ML.01</span>
           </div>
           <div class="project-name">Implementasi Chatbot dengan Metode IndoBERT untuk Prediksi Kode KBLI 5 Digit pada UMKM Berbasis Website</div>
-          <p class="project-desc">An AI chatbot that automatically classifies 5-digit KBLI business codes with an initial accuracy of 95%. Built to support BPS's Desa Cantik program so thousands of small businesses could be classified faster — no more doing it one by one.</p>
+          <p class="project-desc">Chatbot berbasis IndoBERT yang membantu pelaku UMKM menentukan kode KBLI 5 digit dengan lebih mudah dan cepat. Dataset dikumpulkan melalui web scraping, kemudian dilatih menggunakan model klasifikasi IndoBERT di Google Colab. Untuk mengatasi ketidakseimbangan data pada proses pelatihan, diterapkan teknik augmentasi data dan random undersampling, menghasilkan akurasi model sebesar 95% pada top-3 accuracy. Model kemudian diintegrasikan dengan Flask untuk membangun antarmuka chatbot, serta Gemini API agar respons yang dihasilkan lebih natural dan mudah dipahami pengguna.</p>
           <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">NLP</span><span class="stack-tag">Machine Learning</span></div>
           <a href="https://github.com/Mut127/chatbot_umkm.git" target="_blank" class="project-github">
             <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
@@ -187,29 +189,244 @@
         </div>
       </div>
 
+       <!-- ML.04 -->
       <div class="project-card reveal" data-cat="ml">
         <div class="project-thumb" onclick="openLightbox('','Building AI Agents with n8n (Collaborative Project)')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">           
-           <span class="thumb-code"><img src="image/11.jpg" alt="llm"></span>
+          <div class="thumb-art" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
+            <span class="thumb-code"><img src="image/11.jpg" alt="Building AI Agents with n8n"></span>
           </div>
         </div>
         <div class="project-body">
           <div class="project-top">
-           <span class="project-badge badge-ml">AI & Machine Learning</span>
-            <span class="project-index">ML.01</span>
+            <span class="project-badge badge-ml">AI & Machine Learning</span>
+            <span class="project-index">ML.04</span>
           </div>
           <div class="project-name">Building AI Agents with n8n (Collaborative Project)</div>
-          <p class="project-desc">A collaborative project to build AI agents using n8n, focusing on automating workflows and integrating various tools and services.</p>
-          <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">NLP</span><span class="stack-tag">Machine Learning</span></div>
-          <a href="https://github.com/Mut127/chatbot_umkm.git" target="_blank" class="project-github">
+          <p class="project-desc">Proyek kolaborasi bersama dosen pembimbing untuk menyusun buku tutorial n8n. Berperan sebagai AI Engineer, saya merancang dan membangun beberapa studi kasus AI automation, di antaranya sistem pengiriman email otomatis dan chatbot Telegram berbasis n8n, lengkap dengan penjelasan penggunaan node-node inti untuk membantu pembaca memahami konsep automation dari dasar hingga penerapan nyata.</p>
+          <div class="project-stack"><span class="stack-tag">n8n</span><span class="stack-tag">AI Automation</span><span class="stack-tag">API Integration</span></div>
+          <a href="#" target="_blank" class="project-github">
+            <svg viewBox="0 0 87.3 78" xmlns="http://www.w3.org/2000/svg">
+              <path d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z" fill="#0066da"/>
+              <path d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0 -1.2 4.5h27.5z" fill="#00ac47"/>
+              <path d="m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.502l5.852 11.5z" fill="#ea4335"/>
+              <path d="m43.65 25 13.75-23.8c-1.35-.8-2.9-1.2-4.5-1.2h-18.5c-1.6 0-3.15.45-4.5 1.2z" fill="#00832d"/>
+              <path d="m59.8 53h-32.3l-13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z" fill="#2684fc"/>
+              <path d="m73.4 26.5-12.7-22c-.8-1.4-1.95-2.5-3.3-3.3l-13.75 23.8 16.15 28h27.45c0-1.55-.4-3.1-1.2-4.5z" fill="#ffba00"/>
+            </svg>
+            Lihat di Google Drive
+          </a>
+        </div>
+      </div>
+
+      <!-- ML.03 -->
+      <div class="project-card reveal" data-cat="ml">
+        <div class="project-thumb" onclick="openLightbox('','Sentiment Analysis — Palestine Twitter')">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#FFC857,#E08A1E)">
+            <span class="thumb-code"><img src="image/3.jpg" alt="Sentiment Analysis Palestine"></span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <span class="project-badge badge-ml">Machine Learning</span>
+            <span class="project-index">ML.02</span>
+          </div>
+          <div class="project-name">Sentiment Analysis — Palestine Twitter</div>
+          <p class="project-desc">Project data mining untuk analisis sentimen masyarakat pada aplikasi X terhadap genosida yang terjadi di Palestina, menggunakan metode Naive Bayes. Karena ditemukan ketidakseimbangan data pada dataset, diterapkan teknik SMOTE (Synthetic Minority Oversampling Technique) untuk menyeimbangkan kelas data, sehingga akurasi model meningkat dari 95% (Naive Bayes saja) menjadi 98% setelah penerapan SMOTE.</p>
+          <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">Google Colab</span><span class="stack-tag">SMOTE</span><span class="stack-tag">Naive Bayes</span></div>
+          <a href="#" target="_blank" class="project-github">
+            <svg viewBox="0 0 87.3 78" xmlns="http://www.w3.org/2000/svg">
+              <path d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z" fill="#0066da"/>
+              <path d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0 -1.2 4.5h27.5z" fill="#00ac47"/>
+              <path d="m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.502l5.852 11.5z" fill="#ea4335"/>
+              <path d="m43.65 25 13.75-23.8c-1.35-.8-2.9-1.2-4.5-1.2h-18.5c-1.6 0-3.15.45-4.5 1.2z" fill="#00832d"/>
+              <path d="m59.8 53h-32.3l-13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z" fill="#2684fc"/>
+              <path d="m73.4 26.5-12.7-22c-.8-1.4-1.95-2.5-3.3-3.3l-13.75 23.8 16.15 28h27.45c0-1.55-.4-3.1-1.2-4.5z" fill="#ffba00"/>
+            </svg>
+            Lihat di Google Drive
+          </a>
+        </div>
+      </div>
+
+      <!-- ML.04 -->
+      <div class="project-card reveal" data-cat="ml">
+        <div class="project-thumb" onclick="openLightbox('','Sentiment Analysis — Pelantikan Presiden RI 2024 di Aplikasi X')">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#FFC857,#E08A1E)">
+            <span class="thumb-code"><img src="image/8.jpg" alt="Sentiment Analysis Pelantikan Presiden"></span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <span class="project-badge badge-ml">Machine Learning</span>
+            <span class="project-index">ML.03</span>
+          </div>
+          <div class="project-name">Sentiment Analysis — Pelantikan Presiden RI 2024 di Aplikasi X</div>
+          <p class="project-desc">Project data mining untuk analisis sentimen masyarakat terhadap Pelantikan Presiden RI 2024 berdasarkan data dari aplikasi X (Twitter), dikerjakan menggunakan Google Colab. Menerapkan metode yang sama seperti project analisis sentimen sebelumnya, yaitu Naive Bayes yang dikombinasikan dengan SMOTE untuk menangani ketidakseimbangan data, dan berhasil mencapai akurasi model sebesar 99%.</p>
+          <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">SMOTE</span><span class="stack-tag">Naive Bayes</span><span class="stack-tag">Google Colab</span></div>
+          <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
             <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
             View on GitHub
           </a>
         </div>
       </div>
-      
-      <div class="project-card reveal" data-cat="backend"> 
-        <div class="project-thumb" onclick="openLightbox('','CookingKita — Info App for Perantau')">
+
+     
+      <!-- SYS.01a -->
+      <div class="project-card reveal" data-cat="design">
+        <div class="project-thumb" onclick="openLightbox('','System Design for SIMPAN')">
+           <div class="thumb-art" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
+            <span class="thumb-code"><img src="image/4.jpg" alt="System Design for SIMPAN"></span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <span class="project-badge badge-design">System Design</span>
+            <span class="project-index">SYS.01</span>
+          </div>
+          <div class="project-name">System Design for SIMPAN</div>
+          <p class="project-desc">Perancangan system design untuk SIMPAN (Sistem Penyimpanan Ilmu Pengetahuan Pemerintahan), disusun menggunakan draw.io mulai dari flowchart untuk menggambarkan alur sistem secara keseluruhan, use case diagram untuk memetakan interaksi antara pengguna dan sistem, sequence diagram untuk setiap fitur berbasis arsitektur MVC, hingga activity diagram untuk menggambarkan alur proses bisnis pada setiap modul. Dokumen ini menjadi acuan teknis dalam tahap perancangan sebelum masuk ke proses development.</p>
+          <div class="project-stack"><span class="stack-tag">Draw.io</span><span class="stack-tag">UML</span><span class="stack-tag">System Analysis</span></div>
+          <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- SYS.01b -->
+      <div class="project-card reveal" data-cat="backend">
+        <div class="project-thumb" onclick="openLightbox('','SIMPAN — Government Knowledge Management System')">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
+            <span class="thumb-code"><img src="image/5.jpg" alt="SIMPAN"></span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <span class="project-badge badge-backend">Backend</span>
+            <span class="project-index">SYS.02</span>
+          </div>
+          <div class="project-name">SIMPAN — Government KMS</div>
+          <p class="project-desc">SIMPAN (Sistem Penyimpanan Ilmu Pengetahuan Pemerintahan) adalah sistem manajemen pengetahuan yang dibangun berdasarkan arahan BRIN kepada setiap Diskominfo di berbagai wilayah, kini digunakan secara aktif oleh 3-5 divisi di Diskominfo Kota Tasikmalaya. Dibangun menggunakan Laravel 11 dengan Livewire untuk fitur interaksi real-time seperti komentar dan berbagi dokumen. Saya berperan sebagai backend developer, mengembangkan fungsionalitas CRUD penuh yang meningkatkan efisiensi alur kerja internal hingga 40-50%.</p>
+          <div class="project-stack"><span class="stack-tag">Laravel</span><span class="stack-tag">Livewire</span><span class="stack-tag">PHP</span></div>
+          <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- SYS.02a -->
+      <div class="project-card reveal" data-cat="design">
+        <div class="project-thumb" onclick="openLightbox('','System Design for SI Periksa')">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
+            <span class="thumb-code"><img src="image/7.jpg" alt="System Design for SI Periksa"></span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <span class="project-badge badge-design">System Design</span>
+            <span class="project-index">SYS.03</span>
+          </div>
+          <div class="project-name">System Design for SI Periksa</div>
+          <p class="project-desc">Perancangan system design untuk SI Periksa (Sistem Informasi Pengaduan Kritik dan Saran), disusun menggunakan draw.io mulai dari flowchart untuk menggambarkan alur sistem secara keseluruhan, use case diagram untuk memetakan interaksi antara pengguna dan sistem, sequence diagram untuk setiap fitur berbasis arsitektur MVC, hingga activity diagram untuk menggambarkan alur proses bisnis pada setiap modul. Dokumen ini menjadi acuan teknis dalam tahap perancangan sebelum masuk ke proses development.</p>
+          <div class="project-stack"><span class="stack-tag">Draw.io</span><span class="stack-tag">UML</span><span class="stack-tag">System Analysis</span></div>
+          <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- SYS.02b -->
+      <div class="project-card reveal" data-cat="backend">
+        <div class="project-thumb" onclick="openLightbox('','SI PERIKSA — Complaint Management System')">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
+            <span class="thumb-code"><img src="image/6.jpg" alt="SI PERIKSA"></span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <span class="project-badge badge-backend">Backend</span>
+            <span class="project-index">SYS.04</span>
+          </div>
+          <div class="project-name">SI PERIKSA</div>
+          <p class="project-desc">SI PERIKSA (Sistem Informasi Pengaduan Kritik dan Saran) adalah aplikasi web yang dibangun menggunakan Laravel 11 sebagai project mata kuliah Pemrograman Web. Digunakan oleh mahasiswa fakultas untuk melaporkan kejadian yang dialami di area kampus, serta menyampaikan kritik dan saran terhadap kebijakan kampus, dengan alur kerja yang jelas mulai dari pengajuan, pelacakan status, hingga penyelesaian pengaduan.</p>
+          <div class="project-stack"><span class="stack-tag">Laravel</span><span class="stack-tag">PHP</span><span class="stack-tag">MySQL</span></div>
+          <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- SYS.03a -->
+      <div class="project-card reveal" data-cat="design">
+        <div class="project-thumb" onclick="openLightbox('','System Design for XMANAH')">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
+            <span class="thumb-code"><img src="image/9.jpg" alt="System Design for XMANAH"></span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <span class="project-badge badge-design">System Design</span>
+            <span class="project-index">SYS.05</span>
+          </div>
+          <div class="project-name">System design for XMANAH</div>
+          <p class="project-desc">System design untuk XMANAH, aplikasi mobile yang berfungsi sebagai "peta bantuan" bagi mahasiswa dan pendatang baru di sekitar Fakultas Teknik Universitas Jenderal Soedirman, Kecamatan Kalimanah — membantu mereka menemukan kost, tempat makan, tempat ibadah, hingga fasilitas umum seperti sekolah di sekitar kampus. Mencakup penyusunan komponen UI, tipografi, palet warna, dan pedoman desain agar tampilan aplikasi konsisten dan mudah digunakan.</p>
+          <div class="project-stack"><span class="stack-tag">Figma</span><span class="stack-tag">UI/UX Design</span><span class="stack-tag">Design System</span></div>
+          <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- APP.01 -->
+      <div class="project-card reveal" data-cat="mobile">
+        <div class="project-thumb" onclick="openLightbox('','XMANAH — Info App for Perantau')">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
+            <span class="thumb-code"><img src="image/10.jpg" alt="XMANAH"></span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <span class="project-badge badge-mobile">Mobile App</span>
+            <span class="project-index">APP.01</span>
+          </div>
+          <div class="project-name">XMANAH</div>
+          <p class="project-desc">Aplikasi mobile XMANAH yang berfungsi sebagai "peta bantuan" bagi mahasiswa dan pendatang baru di sekitar Fakultas Teknik Universitas Jenderal Soedirman, Kecamatan Kalimanah — membantu mereka menemukan kost, tempat makan, tempat ibadah, hingga fasilitas umum seperti sekolah di sekitar kampus. Dibangun menggunakan Flutter dengan Firebase sebagai database dan backend. Saya memimpin proyek ini dari tahap perancangan hingga rilis.</p>
+          <div class="project-stack"><span class="stack-tag">Flutter</span><span class="stack-tag">Firebase</span><span class="stack-tag">Dart</span></div>
+          <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- SYS.06 -->
+      <div class="project-card reveal" data-cat="backend">
+        <div class="project-thumb" onclick="openLightbox('','Employee Management ERP')">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
+            <span class="thumb-code"><img src="image/12.jpg" alt="Employee Management ERP"></span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <span class="project-badge badge-backend">Backend</span>
+            <span class="project-index">SYS.06</span>
+          </div>
+          <div class="project-name">Employee Management ERP</div>
+          <p class="project-desc">Aplikasi web ERP untuk manajemen kepegawaian sebagai project mata kuliah, dibangun menggunakan Laravel. Mencakup fitur pengajuan cuti, pencatatan kehadiran pegawai, serta penilaian kinerja pegawai, dengan struktur data yang rapi dan alur kerja organisasi yang jelas antar peran/divisi.</p>
+          <div class="project-stack"><span class="stack-tag">Laravel</span><span class="stack-tag">PHP</span><span class="stack-tag">MySQL</span></div>
+          <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Web Statis -->
+      <div class="project-card reveal" data-cat="backend">
+        <div class="project-thumb" onclick="openLightbox('','Cooking Kita')">
           <div class="thumb-art" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
             <span class="thumb-code"><img src="image/2.jpg" alt="Cooking Kita"></span>
           </div>
@@ -220,29 +437,7 @@
             <span class="project-index">Web Statis</span>
           </div>
           <div class="project-name">Cooking Kita</div>
-          <p class="project-desc">A knowledge management system for Diskominfo Tasikmalaya City that is now actively used by 3-5 divisions. Full CRUD functionality that made internal workflows 40-50% more efficient.</p>
-          <div class="project-stack"><span class="stack-tag">Laravel</span><span class="stack-tag">Livewire</span><span class="stack-tag">PHP</span></div>
-          <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
-            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
-            View on GitHub
-          </a>
-        </div>
-      </div>
-
-
-      <div class="project-card reveal" data-cat="design">
-        <div class="project-thumb" onclick="openLightbox('','Design System for SIMPAN')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
-            <span class="thumb-code"><img src="image/4.jpg" alt="Design System for SIMPAN"></span>
-          </div>
-        </div>
-        <div class="project-body">
-          <div class="project-top">
-            <span class="project-badge badge-mobile">Design System</span>
-            <span class="project-index">Design System</span>
-          </div>
-          <div class="project-name">Design System for SIMPAN</div>
-          <p class="project-desc">A mobile app that acts as a "newcomer's map" for students and new arrivals around Kalimanah — helping them find boarding houses, food stalls, places of worship, and nearby schools around UNSOED's Engineering campus. I led this project from start to release.</p>
+          <p class="project-desc">Website katalog resep masakan yang dibangun menggunakan HTML, CSS, dan JavaScript murni sebagai proyek awal perkuliahan (semester 2). Dikerjakan bersama tim, dengan salah satu ide utama menampilkan video di bagian hero section untuk memberikan kesan yang lebih hidup dan menarik saat pertama kali dibuka. Proyek ini menjadi langkah awal dalam memahami dasar-dasar pengembangan web statis dan tampilan antarmuka yang responsif.</p>
           <div class="project-stack"><span class="stack-tag">HTML</span><span class="stack-tag">CSS</span><span class="stack-tag">JavaScript</span></div>
           <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
             <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
@@ -251,169 +446,22 @@
         </div>
       </div>
 
-      <div class="project-card reveal" data-cat="design">
-        <div class="project-thumb" onclick="openLightbox('','Design System for SI Periksa')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
-            <span class="thumb-code"><img src="image/7.jpg" alt="Design System for SI Periksa"></span>
+      <!-- Web Statis -->
+      <div class="project-card reveal" data-cat="backend">
+        <div class="project-thumb" onclick="openLightbox('','Portofolio Website Muthia Khanza')">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
+            <span class="thumb-code"><img src="image/24.png" alt="Portofolio Website Muthia Khanza"></span>
           </div>
         </div>
         <div class="project-body">
           <div class="project-top">
-            <span class="project-badge badge-mobile">Design System</span>
-            <span class="project-index">Design System</span>
+            <span class="project-badge badge-backend">Website</span>
+            <span class="project-index">Web Statis</span>
           </div>
-          <div class="project-name">Design System for SI Periksa</div>
-          <p class="project-desc">A mobile app that acts as a "newcomer's map" for students and new arrivals around Kalimanah — helping them find boarding houses, food stalls, places of worship, and nearby schools around UNSOED's Engineering campus. I led this project from start to release.</p>
+          <div class="project-name">Portofolio Website Muthia Khanza</div>
+          <p class="project-desc">Website portofolio pribadi yang dibangun menggunakan HTML, CSS, dan JavaScript murni untuk menampilkan profil, skill, serta kumpulan project yang telah saya kerjakan. Dirancang dengan tampilan yang bersih dan responsif, termasuk animasi reveal saat scroll dan hero section yang interaktif, sebagai representasi digital dari perjalanan dan kemampuan saya di bidang teknologi.</p>
           <div class="project-stack"><span class="stack-tag">HTML</span><span class="stack-tag">CSS</span><span class="stack-tag">JavaScript</span></div>
-          <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
-            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
-            View on GitHub
-          </a>
-        </div>
-      </div>
-
-       <div class="project-card reveal" data-cat="design">
-        <div class="project-thumb" onclick="openLightbox('','Design System for XMANAH')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
-            <span class="thumb-code"><img src="image/9.jpg" alt="Design System for XMANAH"></span>
-          </div>
-        </div>
-        <div class="project-body">
-          <div class="project-top">
-            <span class="project-badge badge-mobile">Design System</span>
-            <span class="project-index">Design System</span>
-          </div>
-          <div class="project-name">Design System for SI XMANAH</div>
-          <p class="project-desc">A mobile app that acts as a "newcomer's map" for students and new arrivals around Kalimanah — helping them find boarding houses, food stalls, places of worship, and nearby schools around UNSOED's Engineering campus. I led this project from start to release.</p>
-          <div class="project-stack"><span class="stack-tag">HTML</span><span class="stack-tag">CSS</span><span class="stack-tag">JavaScript</span></div>
-          <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
-            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
-            View on GitHub
-          </a>
-        </div>
-      </div>
-
-      <div class="project-card reveal" data-cat="mobile">
-        <div class="project-thumb" onclick="openLightbox('','XMANAH — Info App for Perantau')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
-            <span class="thumb-code"><img src="image/10.jpg" alt="XMANAH"></span>
-          </div>
-        </div>
-        <div class="project-body">
-          <div class="project-top">
-            <span class="project-badge badge-mobile">Mobile App</span>
-            <span class="project-index">APP.02</span>
-          </div>
-          <div class="project-name">XMANAH</div>
-          <p class="project-desc">A mobile app that acts as a "newcomer's map" for students and new arrivals around Kalimanah — helping them find boarding houses, food stalls, places of worship, and nearby schools around UNSOED's Engineering campus. I led this project from start to release.</p>
-          <div class="project-stack"><span class="stack-tag">Flutter</span><span class="stack-tag">Firebase</span><span class="stack-tag">Dart</span></div>
-          <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
-            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
-            View on GitHub
-          </a>
-        </div>
-      </div>
-
-      <div class="project-card reveal" data-cat="backend"> 
-        <div class="project-thumb" onclick="openLightbox('','SIMPAN — Government Knowledge Management System')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
-            <span class="thumb-code"><img src="image/5.jpg" alt="SIMPAN"></span>
-          </div>
-        </div>
-        <div class="project-body">
-          <div class="project-top">
-            <span class="project-badge badge-backend">Backend</span>
-            <span class="project-index">SYS.03</span>
-          </div>
-          <div class="project-name">SIMPAN — Government KMS</div>
-          <p class="project-desc">A knowledge management system for Diskominfo Tasikmalaya City that is now actively used by 3-5 divisions. Full CRUD functionality that made internal workflows 40-50% more efficient.</p>
-          <div class="project-stack"><span class="stack-tag">Laravel</span><span class="stack-tag">Livewire</span><span class="stack-tag">PHP</span></div>
-          <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
-            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
-            View on GitHub
-          </a>
-        </div>
-      </div>
-
-      <div class="project-card reveal" data-cat="ml"> 
-        <div class="project-thumb" onclick="openLightbox('','Sentiment Analysis — Palestine Twitter')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#FFC857,#E08A1E)">
-            <span class="thumb-code"><img src="image/3.jpg" alt="Sentiment Analysis"></span>
-          </div>
-        </div>
-        <div class="project-body">
-          <div class="project-top">
-            <span class="project-badge badge-ml">Machine Learning</span>
-            <span class="project-index">ML.04</span>
-          </div>
-          <div class="project-name">Sentiment Analysis — Palestine Twitter</div>
-          <p class="project-desc">A Naive Bayes model enhanced with SMOTE for sentiment analysis of thousands of tweets about the genocide in Palestine. SMOTE was used to handle imbalanced data so the model wouldn't be blind to minority classes.</p>
-          <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">SMOTE</span><span class="stack-tag">Naive Bayes</span></div>
-          <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
-            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
-            View on GitHub
-          </a>
-        </div>
-      </div>
-
-      
-      <div class="project-card reveal" data-cat="ml"> 
-        <div class="project-thumb" onclick="openLightbox('','Sentiment Analysis — Pelantikan Presiden RI 2024 di Aplikasi X')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#FFC857,#E08A1E)">
-            <span class="thumb-code"><img src="image/8.jpg" alt="Sentiment Analysis"></span>
-          </div>
-        </div>
-        <div class="project-body">
-          <div class="project-top">
-            <span class="project-badge badge-ml">Machine Learning</span>
-            <span class="project-index">ML.04</span>
-          </div>
-          <div class="project-name">Sentiment Analysis — Pelantikan Presiden RI 2024 di Aplikasi X</div>
-          <p class="project-desc">A Naive Bayes model enhanced with SMOTE for sentiment analysis of thousands of tweets about the genocide in Palestine. SMOTE was used to handle imbalanced data so the model wouldn't be blind to minority classes.</p>
-          <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">SMOTE</span><span class="stack-tag">Naive Bayes</span></div>
-          <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
-            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
-            View on GitHub
-          </a>
-        </div>
-      </div>
-
-      <div class="project-card reveal" data-cat="backend"> 
-        <div class="project-thumb" onclick="openLightbox('','SI PERIKSA — Complaint Management System')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
-            <span class="thumb-code"><img src="image/6.jpg" alt="SI PERIKSA"></span>
-          </div>
-        </div>
-        <div class="project-body">
-          <div class="project-top">
-            <span class="project-badge badge-backend">Backend </span>
-            <span class="project-index">SYS.05</span>
-          </div>
-          <div class="project-name">SI PERIKSA</div>
-          <p class="project-desc">A complaint management system that keeps public complaints from getting stuck halfway — from submission, to tracking, to resolution, with a clear workflow throughout.</p>
-          <div class="project-stack"><span class="stack-tag">Laravel</span><span class="stack-tag">PHP</span><span class="stack-tag">MySQL</span></div>
-          <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
-            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
-            View on GitHub
-          </a>
-        </div>
-      </div>
-
-      <div class="project-card reveal" data-cat="backend"> 
-        <div class="project-thumb" onclick="openLightbox('','Employee Management ERP')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
-            <span class="thumb-code"><img src="image/12.jpg" alt="SI PERIKSA"></span>
-          </div>
-        </div>
-        <div class="project-body">
-          <div class="project-top">
-            <span class="project-badge badge-backend">Backend</span>
-            <span class="project-index">SYS.06</span>
-          </div>
-          <div class="project-name">Employee Management ERP</div>
-          <p class="project-desc">Backend for an ERP-style employee management system — attendance, roles, and organizational workflows. Focused on clean data structures and a reliable API.</p>
-          <div class="project-stack"><span class="stack-tag">Laravel</span><span class="stack-tag">PHP</span><span class="stack-tag">MySQL</span></div>
-          <a href="https://github.com/username/nama-repo" target="_blank" class="project-github">
+          <a href="https://github.com/Mut127/membuat-web-statis.git" target="_blank" class="project-github">
             <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
             View on GitHub
           </a>
@@ -434,8 +482,8 @@
       <div class="exp-card reveal">
         <div class="exp-rail"><div class="exp-dot"></div></div>
         <div>
-          <div class="exp-media" onclick="openLightbox('image/bps.jpg','Statistics Indonesia (BPS) — Tasikmalaya City')">
-            <img src="image/bps.jpg" alt="Statistics Indonesia (BPS) — Tasikmalaya City" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="exp-media" onclick="openLightbox('image/16.jpg','Statistics Indonesia (BPS) — Tasikmalaya City')">
+            <img src="image/16.jpg" alt="Statistics Indonesia (BPS) — Tasikmalaya City" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="exp-media-fallback" style="background:linear-gradient(135deg,#FF5FA2,#C9338E)">
               <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
               <span>BPS Tasikmalaya City</span>
@@ -455,8 +503,8 @@
       <div class="exp-card reveal">
         <div class="exp-rail"><div class="exp-dot"></div></div>
         <div>
-          <div class="exp-media" onclick="openLightbox('image/diskominfo.jpg','Department of Communication & Informatics — Tasikmalaya City')">
-            <img src="image/diskominfo.jpg" alt="Department of Communication & Informatics — Tasikmalaya City" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="exp-media" onclick="openLightbox('image/15.jpg','Department of Communication & Informatics — Tasikmalaya City')">
+            <img src="image/15.jpg" alt="Department of Communication & Informatics — Tasikmalaya City" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="exp-media-fallback" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
               <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 4v16"/></svg>
               <span>Diskominfo Tasikmalaya</span>
@@ -478,8 +526,8 @@
       <div class="section-label reveal" style="margin-bottom:1rem">Beyond Coding</div>
       <div class="org-grid">
         <div class="org-card reveal">
-          <div class="org-media" onclick="openLightbox('image/stech.jpg','Soedirman Technophoria (S-TECH) 2023')">
-            <img src="image/stech.jpg" alt="Soedirman Technophoria (S-TECH) 2023" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="org-media" onclick="openLightbox('image/17.jpg','Soedirman Technophoria (S-TECH) 2023')">
+            <img src="image/17.jpg" alt="Soedirman Technophoria (S-TECH) 2023" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="org-media-fallback" style="background:linear-gradient(135deg,#FFC857,#E08A1E)">
               <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>
             </div>
@@ -490,8 +538,8 @@
           <div class="org-desc">Led 30+ members, organized a Web Programming Competition & UI/UX Seminar with 100+ participants.</div>
         </div>
         <div class="org-card reveal">
-          <div class="org-media" onclick="openLightbox('image/hmif.jpg','HMIF UNSOED')">
-            <img src="image/hmif.jpg" alt="HMIF UNSOED" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="org-media" onclick="openLightbox('image/18.jpg','HMIF UNSOED')">
+            <img src="image/18.jpg" alt="HMIF UNSOED" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="org-media-fallback" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
               <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="9" cy="7" r="3"/><path d="M2 21v-1a6 6 0 0 1 6-6"/><circle cx="17" cy="9" r="2.5"/><path d="M14 21v-1a5 5 0 0 1 8-4"/></svg>
             </div>
@@ -502,8 +550,8 @@
           <div class="org-desc">Supported Soedirman Technophoria 2023, keeping 90%+ of programs running on schedule.</div>
         </div>
         <div class="org-card reveal">
-          <div class="org-media" onclick="openLightbox('image/mentoring.jpg','Informatics Orientation Program')">
-            <img src="image/mentoring.jpg" alt="Informatics Orientation Program" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="org-media" onclick="openLightbox('image/19.jpg','Informatics Orientation Program')">
+            <img src="image/19.jpg" alt="Informatics Orientation Program" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="org-media-fallback" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
               <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
             </div>
@@ -512,6 +560,67 @@
           <div class="org-org">Informatics Orientation Program</div>
           <div class="org-period">AUG – DEC 2024</div>
           <div class="org-desc">Mentored ~20 new students in adjusting to academic and social life at UNSOED.</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:3.4rem">
+      <div class="section-label reveal" style="margin-bottom:1rem">Certifications &amp; Achievements</div>
+      <div class="org-grid cred-grid">
+        <div class="org-card reveal">
+          <div class="org-media" onclick="openLightbox('image/21.png','Data Science Training — Sinau Jogja')">
+            <img src="image/21.png" alt="Data Science Training — Sinau Jogja" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="org-media-fallback" style="background:linear-gradient(135deg,#22D3EE,#1699B0)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+            </div>
+          </div>
+          <div class="org-role">Data Science Training</div>
+          <div class="org-org">Sinau Jogja</div>
+          <div class="org-period">2025</div>
+        </div>
+        <div class="org-card reveal">
+          <div class="org-media" onclick="openLightbox('image/20.png','Machine Learning Bootcamp — Special Skill Indonesia')">
+            <img src="image/20.png  " alt="Machine Learning Bootcamp — Special Skill Indonesia" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="org-media-fallback" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+            </div>
+          </div>
+          <div class="org-role">Machine Learning Bootcamp</div>
+          <div class="org-org">Special Skill Indonesia</div>
+          <div class="org-period">2025</div>
+        </div>
+        <div class="org-card reveal">
+          <div class="org-media" onclick="openLightbox('image/23.png','Finalist — PKM Rector Cup IV')">
+            <img src="image/23.png" alt="Finalist — PKM Rector Cup IV" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="org-media-fallback" style="background:linear-gradient(135deg,#FFC857,#E08A1E)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+            </div>
+          </div>
+          <div class="org-role">Finalist — PKM Rector Cup IV</div>
+          <div class="org-org">Website-Based Sign Language Translator System</div>
+          <div class="org-period">2024</div>
+        </div>
+        <!-- <div class="org-card reveal">
+          <div class="org-media" onclick="openLightbox('image/23.png','Finalist — LIDM Student Digital Innovation Competition')">
+            <img src="image/23.png" alt="Finalist — LIDM Student Digital Innovation Competition" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="org-media-fallback" style="background:linear-gradient(135deg,#FF5FA2,#C9338E)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+            </div>
+          </div>
+          <div class="org-role">Finalist — LIDM Student Digital Innovation Competition</div>
+          <div class="org-org">Website-Based Sign Language Translator System</div>
+          <div class="org-period">2024</div>
+        </div> -->
+        <div class="org-card reveal">
+          <div class="org-media" onclick="openLightbox('image/22.png','Finalist — Gelora PKM Fakultas Teknik')">
+            <img src="image/22.png" alt="Finalist — Gelora PKM Fakultas Teknik" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="org-media-fallback" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+            </div>
+          </div>
+          <div class="org-role">Finalist — Gelora PKM Fakultas Teknik</div>
+          <div class="org-org">Sentiment Analysis of Genocide in Palestine on Twitter</div>
+          <div class="org-period">2024</div>
         </div>
       </div>
     </div>
