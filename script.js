@@ -47,10 +47,50 @@
   const pills = document.querySelectorAll('.filter-pill');
   const cards = document.querySelectorAll('.project-card');
 
-  document.querySelectorAll('.project-desc').forEach(desc => {
-    desc.addEventListener('click', () => {
-      desc.classList.toggle('expanded');
-    });
+  // "Baca selengkapnya" -> buka modal, bukan expand di dalam grid
+  // (biar card lain di baris yang sama tidak ikut melar/berubah tinggi)
+  const projectModal = document.getElementById('project-modal');
+  const projectModalMedia = document.getElementById('project-modal-media');
+  const projectModalImg = document.getElementById('project-modal-img');
+  const projectModalName = document.getElementById('project-modal-name');
+  const projectModalDesc = document.getElementById('project-modal-desc');
+  const projectModalStack = document.getElementById('project-modal-stack');
+
+  function openProjectModal(card) {
+    const name = card.querySelector('.project-name')?.textContent.trim() || '';
+    const desc = card.querySelector('.project-desc')?.textContent.trim() || '';
+    const tags = [...card.querySelectorAll('.stack-tag')].map(t => t.textContent.trim());
+    const imgEl = card.querySelector('.project-thumb img');
+
+    if (imgEl && imgEl.src) {
+      projectModalImg.src = imgEl.src;
+      projectModalImg.alt = name;
+      projectModalMedia.classList.remove('hide');
+    } else {
+      projectModalMedia.classList.add('hide');
+    }
+
+    projectModalName.textContent = name;
+    projectModalDesc.textContent = desc;
+    projectModalStack.innerHTML = tags.map(t => `<span class="stack-tag">${t}</span>`).join('');
+    projectModal.classList.add('open');
+  }
+  function closeProjectModal() {
+    projectModal.classList.remove('open');
+  }
+  document.querySelectorAll('.project-card').forEach(card => {
+    const desc = card.querySelector('.project-desc');
+    if (!desc) return;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'project-readmore';
+    btn.textContent = 'Baca selengkapnya →';
+    desc.insertAdjacentElement('afterend', btn);
+    btn.addEventListener('click', () => openProjectModal(card));
+  });
+  document.getElementById('project-modal-close')?.addEventListener('click', closeProjectModal);
+  projectModal?.addEventListener('click', (e) => {
+    if (e.target.id === 'project-modal') closeProjectModal();
   });
 
   function moveHighlight(pill) {
