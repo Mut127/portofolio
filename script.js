@@ -47,8 +47,8 @@
   const pills = document.querySelectorAll('.filter-pill');
   const cards = document.querySelectorAll('.project-card');
 
-  // "Baca selengkapnya" -> buka modal, bukan expand di dalam grid
-  // (biar card lain di baris yang sama tidak ikut melar/berubah tinggi)
+  // "Read more" -> opens a modal instead of expanding inline in the grid
+  // (so other cards in the same row don't stretch or change height)
   const projectModal = document.getElementById('project-modal');
   const projectModalMedia = document.getElementById('project-modal-media');
   const projectModalImg = document.getElementById('project-modal-img');
@@ -84,7 +84,7 @@
     const btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'project-readmore';
-    btn.textContent = 'Baca selengkapnya →';
+    btn.textContent = 'Read more →';
     desc.insertAdjacentElement('afterend', btn);
     btn.addEventListener('click', () => openProjectModal(card));
   });
