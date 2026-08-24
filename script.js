@@ -15,7 +15,7 @@
   });
 
   // Role rotator
-  const roles = ["AI Enthusiast", "Backend Developer", "Data Scientist", "System Designer"];
+  const roles = ["Informatics Graduate","Technical Writer", "AI Enthusiast", "Backend Developer", "Data Scientist", "System Designer"];
   let roleIdx = 0;
   const roleText = document.getElementById('role-text');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

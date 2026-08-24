@@ -576,6 +576,7 @@ z-index:-1;
   .badge-mobile{background:#DFFAF1; color:var(--green)}
   .badge-backend{background:#EDE7FF; color:var(--accent)}
   .badge-design{background:#cae8ef; color:var(--accent)}
+  .badge-docs{background:#efc8f1; color:#9c69b6}
   .project-index{font-family:'JetBrains Mono',monospace; font-size:.66rem; color:var(--ink-faint)}
   .project-name{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1.02rem; line-height:1.3;
     display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
