@@ -574,7 +574,7 @@ z-index:-1;
   }
   .badge-ml{background:#FFE3F1; color:#a68895}
   .badge-mobile{background:#DFFAF1; color:var(--green)}
-  .badge-backend{background:#EDE7FF; color:var(--accent)}
+  .badge-website{background:#EDE7FF; color:var(--accent)}
   .badge-design{background:#cae8ef; color:var(--accent)}
   .badge-docs{background:#efc8f1; color:#9c69b6}
   .project-index{font-family:'JetBrains Mono',monospace; font-size:.66rem; color:var(--ink-faint)}
