@@ -15,7 +15,7 @@
   });
 
   // Role rotator
-  const roles = ["Informatics Graduate","Technical Writer", "AI Enthusiast", "Backend Developer", "Data Scientist", "System Designer"];
+  const roles = ["Informatics Graduate","Technical Writer", "AI Enthusiast", "Fullstack Developer", "Data Scientist", "System Designer"];
   let roleIdx = 0;
   const roleText = document.getElementById('role-text');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -157,3 +157,109 @@
   function closeLightbox(e) {
     if (e.target.id === 'lightbox') document.getElementById('lightbox').classList.remove('open');
   }
+
+ 
+(function () {
+  var DEVICON = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/';
+  var SIMPLE = 'https://cdn.simpleicons.org/';
+  var SPEED = 40; // px per detik, makin besar makin cepat
+  var NS = 'http://www.w3.org/2000/svg';
+
+  var section = document.getElementById('skills');
+  if (!section) return;
+
+  function iconUrl(spec) {
+    if (spec.indexOf('si:') === 0) return SIMPLE + spec.slice(3);
+    return DEVICON + spec + '/' + spec + '-original.svg';
+  }
+
+  function canLoad(url) {
+    return new Promise(function (resolve) {
+      var img = new Image();
+      img.onload = function () { resolve(true); };
+      img.onerror = function () { resolve(false); };
+      img.src = url;
+    });
+  }
+
+  // pasang logo di tiap badge, kalau gagal dimuat pakai titik ungu
+  async function decorate(badge) {
+    var spec = badge.getAttribute('data-icon');
+    var el = null;
+
+    if (spec && spec.indexOf('svg:') === 0) {
+      el = document.createElementNS(NS, 'svg');
+      el.setAttribute('class', 'ico');
+      el.setAttribute('aria-hidden', 'true');
+      var use = document.createElementNS(NS, 'use');
+      use.setAttribute('href', '#i-' + spec.slice(4));
+      el.appendChild(use);
+    } else if (spec) {
+      var url = iconUrl(spec);
+      if (await canLoad(url)) {
+        el = new Image();
+        el.src = url;
+        el.alt = '';
+        el.className = 'ico';
+        el.width = 20;
+        el.height = 20;
+      }
+    }
+
+    if (!el) {
+      el = document.createElement('span');
+      el.className = 'dot';
+    }
+    badge.prepend(el);
+  }
+
+  // ulang isi badge sampai cukup lebar, lalu gandakan supaya loop-nya mulus
+  function buildMarquee(marquee) {
+    var base = marquee._base;
+    marquee.innerHTML = '<div class="marquee-group">' + base + '</div>';
+    var group = marquee.firstElementChild;
+
+    var guard = 0;
+    while (group.offsetWidth < marquee.clientWidth && guard < 12) {
+      group.insertAdjacentHTML('beforeend', base);
+      guard++;
+    }
+
+    var copy = group.cloneNode(true);
+    copy.setAttribute('aria-hidden', 'true');
+    marquee.appendChild(copy);
+
+    marquee.style.setProperty('--dur', (group.offsetWidth / SPEED) + 's');
+  }
+
+  async function init() {
+    var badges = Array.prototype.slice.call(section.querySelectorAll('.skill-badge'));
+    await Promise.all(badges.map(decorate));
+
+    var marquees = Array.prototype.slice.call(section.querySelectorAll('.marquee'));
+    marquees.forEach(function (m) {
+      m._base = m.querySelector('.marquee-group').innerHTML;
+    });
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      marquees.forEach(function (m) { m.classList.add('is-static'); });
+      return;
+    }
+
+    function buildAll() { marquees.forEach(buildMarquee); }
+    buildAll();
+
+    var timer;
+    window.addEventListener('resize', function () {
+      clearTimeout(timer);
+      timer = setTimeout(buildAll, 250);
+    });
+  }
+
+  function start() {
+    (document.fonts ? document.fonts.ready : Promise.resolve()).then(init);
+  }
+
+  if (document.readyState === 'complete') start();
+  else window.addEventListener('load', start);
+})();

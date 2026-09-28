@@ -108,8 +108,8 @@
 }
   .section-desc{font-size:1.02rem; color:var(--ink-soft); max-width:560px; line-height:1.6; margin-bottom:2.6rem}
 
-  section{padding:6rem 0}
-  @media(max-width:640px){section{padding:4rem 0}}
+section{padding:3.5rem 0}
+@media(max-width:640px){section{padding:2.5rem 0}}
 
   /* reveal on scroll */
   .reveal{opacity:0; transform:translateY(22px); transition:opacity .7s var(--ease), transform .7s var(--ease)}
@@ -492,7 +492,7 @@ z-index:-1;
 }
 
   /* ===== SKILLS ===== */
-  
+/*   
   .skills-section{background:var(--surface-2); margin:0}
   .skill-groups{display:grid; grid-template-columns:repeat(2,1fr); gap:2.4rem 3rem}
   @media(max-width:700px){.skill-groups{grid-template-columns:1fr}}
@@ -513,8 +513,102 @@ z-index:-1;
     box-shadow:var(--glow-accent);
   }
   .skill-badge .dot{width:6px; height:6px; border-radius:50%; background:var(--accent); transition:background .25s}
-  .skill-badge:hover .dot{background:#fff; box-shadow:0 0 6px #fff}
+  .skill-badge:hover .dot{background:#fff; box-shadow:0 0 6px #fff} */
 
+  /* ===== Skills: 2 baris marquee ===== */
+  #skills {
+  padding: 4rem 0 1rem;   /* atas 4rem, bawah dirapatkan */
+}
+
+#skills .skill-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+#skills .marquee {
+  --gap: 14px;
+  --dur: 40s;
+  display: flex;
+  overflow: hidden;
+  padding: 10px 0; /* biar bayangan nggak kepotong */
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+#skills .marquee-group {
+  display: flex;
+  flex-shrink: 0;
+  gap: var(--gap);
+  padding-right: var(--gap);
+  animation: skills-scroll var(--dur) linear infinite;
+}
+
+#skills .marquee.reverse .marquee-group { animation-direction: reverse; }
+#skills .marquee:hover .marquee-group { animation-play-state: paused; }
+
+#skills .skill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  padding: 10px 20px 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(109, 93, 252, 0.12);
+  box-shadow: 0 4px 14px rgba(109, 93, 252, 0.08);
+  font-size: 15px;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+#skills .skill-badge:hover {
+  transform: translateY(-3px);
+  border-color: rgba(109, 93, 252, 0.45);
+  box-shadow: 0 10px 24px rgba(109, 93, 252, 0.18);
+}
+
+#skills .skill-badge .ico {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+#skills .skill-badge svg.ico { color: #6d5dfc; }
+
+#skills .skill-badge .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #6d5dfc;
+  margin: 0 6px;
+}
+
+@keyframes skills-scroll {
+  to { transform: translateX(-100%); }
+}
+
+/* kalau pengguna mematikan animasi */
+#skills .marquee.is-static {
+  overflow: visible;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+#skills .marquee.is-static .marquee-group {
+  flex-wrap: wrap;
+  animation: none;
+  padding-right: 0;
+}
+
+#skills + section {
+  padding-top: 2rem;
+}
+
+@media (max-width: 640px) {
+  #skills { padding: 3rem 0 .5rem; }
+  #skills + section { padding-top: 1.5rem; }
+}
   /* ===== PROJECTS ===== */
   .filter-bar{
     position:relative; display:inline-flex; gap:.3rem; padding:.35rem; background:var(--surface);
@@ -751,3 +845,14 @@ scale(1);
   .lightbox-inner img{border-radius:14px; width:100%}
   .lightbox-caption{color:var(--bg); font-family:'Space Grotesk',sans-serif; margin-top:1rem; text-align:center}
   .lightbox-close{position:absolute; top:-42px; right:0; background:none; border:none; color:var(--bg); font-size:1.4rem; cursor:pointer}
+
+  /* ===== RAPATKAN JARAK ANTAR SECTION (taruh paling bawah) ===== */
+section {
+  padding: 2rem 0 !important;
+}
+.hero {
+  padding: 2.5rem 0 2rem !important;
+}
+@media (max-width: 640px) {
+  section { padding: 1.5rem 0 !important; }
+}
