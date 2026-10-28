@@ -6,7 +6,7 @@
 <title>Muthia Khanza - Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Pinyon+Script&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -29,6 +29,7 @@
       <div class="project-modal-name" id="project-modal-name"></div>
       <div class="project-modal-desc" id="project-modal-desc"></div>
       <div class="project-modal-stack" id="project-modal-stack"></div>
+      <a class="project-github project-modal-link" id="project-modal-link" href="#" target="_blank" rel="noopener"></a>
     </div>
   </div>
 </div>
@@ -50,154 +51,236 @@
 </div>
 
 <div class="hero">
-  <div class="hero-blob" style="width:480px;height:480px;top:-160px;right:-120px;background:radial-gradient(circle,rgba(124,92,252,.22),transparent 70%)"></div>
-  <div class="hero-blob" style="width:380px;height:380px;bottom:-140px;left:-100px;background:radial-gradient(circle,rgba(255,95,162,.18),transparent 70%)"></div>
-  <div class="hero-blob" style="width:260px;height:260px;top:40%;left:60%;background:radial-gradient(circle,rgba(34,211,238,.16),transparent 70%)"></div>
-  <span class="hero-sparkle" style="top:12%;left:8%;animation-delay:.2s">✦</span>
-  <span class="hero-sparkle" style="top:70%;left:4%;animation-delay:1.4s;color:var(--accent2)">✧</span>
-  <span class="hero-sparkle" style="top:20%;left:92%;animation-delay:.8s;color:var(--accent3)">✦</span>
-  <span class="hero-sparkle" style="top:85%;left:88%;animation-delay:2s;color:var(--amber)">✧</span>
+  <div class="hero-blob" style="width:480px;height:480px;top:-160px;right:-120px;background:radial-gradient(circle,rgba(235,129,151,.22),transparent 70%)"></div>
+  <div class="hero-blob" style="width:380px;height:380px;bottom:-140px;left:-100px;background:radial-gradient(circle,rgba(235,129,151,.18),transparent 70%)"></div>
+  <div class="hero-blob" style="width:260px;height:260px;top:40%;left:60%;background:radial-gradient(circle,rgba(162,166,110,.16),transparent 70%)"></div>
+  <span class="hero-dot p " style="--s:56px;left:3%;top:30%"></span>
+  <span class="hero-dot m " style="--s:28px;left:1.5%;top:53%"></span>
+  <span class="hero-dot p " style="--s:36px;left:2.5%;bottom:13%"></span>
+  <span class="hero-dot m hide-sm" style="--s:20px;left:17%;bottom:6%"></span>
+  <span class="hero-dot p " style="--s:72px;right:3%;top:27%"></span>
+  <span class="hero-dot m " style="--s:34px;right:1.5%;top:54%"></span>
+  <span class="hero-dot p " style="--s:44px;right:7%;bottom:11%"></span>
+  <span class="hero-dot m hide-sm" style="--s:24px;right:15%;bottom:5%"></span>
+  <span class="hero-dot p hide-sm" style="--s:14px;left:41%;top:26%"></span>
+  <span class="hero-dot m hide-sm" style="--s:12px;right:37%;top:27%"></span>
+  <span class="hero-dot m hide-sm" style="--s:16px;left:9%;top:76%"></span>
+  <span class="hero-dot p hide-sm" style="--s:18px;right:11%;top:70%"></span>
   <div class="hero-inner">
-    <div>
-      <!-- <div class="eyebrow reveal in">Open to full-time work</div> -->
-      <h1 class="hero-name reveal in">Muthia<br><em>Khanza</em></h1>
-      <div class="role-line reveal in"><span id="role-text">AI Enthusiast</span><span class="cursor"></span></div>
-      <p class="hero-sub reveal in">Fresh Informatics graduate passionate about artificial intelligence, website development, and system design, building intelligent, scalable, and reliable software for real-world problems.</p>
+    <div class="hero-copy">
+      <h1 class="hero-name reveal in">Hi, I'm<br>Muthia <em>Khanza</em></h1>
+      <p class="hero-sub reveal in">Fresh Informatics graduate who builds reliable web applications and software, with hands-on experience integrating AI to make products smarter and more useful.</p>
       <div class="hero-cta reveal in">
         <a href="#projects" class="btn-primary">See My Projects →</a>
         <a href="#contact" class="btn-secondary">Contact Me</a>
       </div>
-      <!-- <div class="stat-row reveal in">
-        <div><div class="stat-num">6+</div><div class="stat-lbl">SYSTEMS & APPS BUILT</div></div>
-        <div><div class="stat-num">95%</div><div class="stat-lbl">AI CLASSIFICATION MODEL ACCURACY</div></div>
-        <div><div class="stat-num">2</div><div class="stat-lbl">GOVERNMENT AGENCY INTERNSHIPS</div></div>
-      </div> -->
     </div>
+
     <div class="hero-photo reveal in">
-      <div>
-        <img src="image/14.png" alt="Muthia Khanza" id="hero-photo-img">
+      <div class="hero-char" id="hero-char" role="img" aria-label="3D character of Muthia Khanza wearing a pink hijab and headphones, sitting behind a laptop">
+        <img class="hero-char-body" src="image/hero-body.webp" alt="" draggable="false">
+        <div class="hero-char-head" id="hero-head">
+          <img class="on" src="image/hero-head-front.webp" alt="" draggable="false">
+          <canvas id="hero-head-canvas" width="377" height="308" aria-hidden="true"></canvas>
+        </div>
       </div>
-      <!-- <div class="hero-tag-float"><span class="dotpulse"></span> open to work</div> -->
+    </div>
+
+    <div class="hero-chat reveal in" aria-label="Things I'm interested in">
+      <div class="chat-scroll" id="chat-scroll" aria-live="off"></div>
     </div>
   </div>
 </div>
 
 <section id="about">
+  <div class="about-deco about-deco-1"></div>
+  <div class="about-deco about-deco-2"></div>
   <div class="wrap">
-    <div class="section-label reveal">About Me</div>
-    <!-- <div class="section-title reveal">Get to Know Me Better</div> -->
-    <div class="about-quote">
-    "I enjoy turning ideas into useful digital solutions."
-</div>
-    <div class="about-grid">
-      <div class="about-text reveal">
-  <p>I'm Muthia Khanza, an Informatics graduate from Universitas Jenderal Soedirman, focused on Artificial Intelligence, System Design, Website Development, Data, and Machine Learning. I love turning ideas into apps people actually use.</p>
- 
-  <p>At <strong>BPS Tasikmalaya City</strong>, I built an AI chatbot for KBLI code classification. At <strong>Diskominfo Tasikmalaya Regency</strong>, I developed a Laravel-based knowledge management system for internal operations.</p>
- 
-  <p>I work carefully and structured always understanding the root cause before jumping to a solution. For me, good tech isn't just running, it's maintainable, pleasant to use, and built to grow.</p>
-</div>
-      <div class="about-aside reveal">
-        <div class="info-row">
-          <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg></div>
-          <div><div class="info-label">Location</div><div class="info-value">Tasikmalaya, West Java, Indonesia</div></div>
+    <div class="about-layout">
+
+      <!-- KIRI: judul + foto berframe -->
+      <div class="about-visual reveal" style="--d:0s">
+        <div class="about-heading">
+          <span class="about-heading-dot"></span>
+          <h2>About <em>Me</em></h2>
         </div>
-        <div class="info-row">
-          <div class="info-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-          <div><div class="info-label">Education</div><div class="info-value">Informatics - UNSOED</div></div>
-        </div>
-        <div class="info-row">
-          <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></div>
-          <div><div class="info-label">Focus</div><div class="info-value">Website Developer | AI Enthusiast | Data & ML | System Design | Technical Writer | Informatics Graduate</div></div>
-        </div>
-        <div class="info-row">
-          <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <div><div class="info-label">Contact</div><div class="info-value">muthiakhanza034@gmail.com</div></div>
+        <div class="about-photo-wrap">
+          <div class="about-photo-glow"></div>
+          <img class="about-photo" src="image/about-photo.webp" alt="Muthia Khanza in a green floral frame" draggable="false">
+          <span class="about-chip about-chip-1">✦ Software Engineer</span>
+          <span class="about-chip about-chip-2">&lt;/&gt; Web Developer</span>
         </div>
       </div>
+
+      <!-- KANAN: isi -->
+      <div class="about-content">
+
+        <div class="about-info reveal" style="--d:.38s">
+          <div class="about-info-row about-info-story">
+            <span class="ai-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg></span>
+            <div class="about-text-new">
+              <p>I'm Muthia Khanza, an Informatics graduate from Universitas Jenderal Soedirman, focused on web and software development. I love turning ideas into apps people actually use, from the interface people see to the system working behind it.</p>
+              <p>At <strong>Diskominfo Tasikmalaya Regency</strong>, I developed a Laravel-based knowledge management system for internal operations. At <strong>BPS Tasikmalaya City</strong>, I built a web-based chatbot for KBLI code classification, bringing AI into a real, usable product.</p>
+              <p>I work in a careful, structured way, always finding the root cause before jumping to a solution. For me, good software isn't just running, it's maintainable, pleasant to use, and built to grow.</p>
+            </div>
+          </div>
+          <div class="about-info-row">
+            <span class="ai-icon"><svg viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12.5V17c0 1.1 2.7 2.5 6 2.5s6-1.4 6-2.5v-4.5"/></svg></span>
+            <div class="ai-text"><span class="ai-label">Education</span><span class="ai-value">Informatics, UNSOED</span></div>
+          </div>
+          <div class="about-info-row">
+            <span class="ai-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></span>
+            <div class="ai-text"><span class="ai-label">Contact</span><a class="ai-value" href="mailto:muthiakhanza034@gmail.com">muthiakhanza034@gmail.com</a></div>
+          </div>
+          <div class="about-info-row about-info-focus">
+            <span class="ai-icon"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></span>
+            <div class="ai-text">
+              <span class="ai-label">Focus</span>
+              <div class="about-tags">
+                <span>Website Development</span><span>Software Engineering</span><span>System Design</span><span>AI Integration</span><span>Technical Writing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
 <section id="skills" class="skills-section">
   <div class="wrap">
-    <div class="section-label reveal">Skills</div>
-    <div class="section-title reveal">Tech Stack</div>
-
-    <div class="skill-groups reveal">
-
-      <!-- Baris 1 -->
-      <div class="marquee">
-        <div class="marquee-group">
-          <div class="skill-badge" data-icon="react">React.js</div>
-          <div class="skill-badge" data-icon="javascript">JavaScript</div>
-          <div class="skill-badge" data-icon="flutter">Flutter</div>
-          <div class="skill-badge" data-icon="tailwindcss">Tailwind CSS</div>
-          <div class="skill-badge" data-icon="python">Python</div>
-          <div class="skill-badge" data-icon="nodejs">Node.js</div>
-          <div class="skill-badge" data-icon="laravel">Laravel</div>
-          <div class="skill-badge" data-icon="firebase">Firebase</div>
-          <div class="skill-badge" data-icon="php">PHP</div>
-          <div class="skill-badge" data-icon="git">Git</div>
-          <div class="skill-badge" data-icon="mysql">MySQL</div>
-          <div class="skill-badge" data-icon="docker">Docker</div>
-          <div class="skill-badge" data-icon="flask">Flask</div>
-          <div class="skill-badge" data-icon="si:googlegemini">Gemini API</div>
-          <div class="skill-badge" data-icon="postman">Postman</div>
-          <div class="skill-badge" data-icon="supabase">Supabase</div>
-          <div class="skill-badge" data-icon="svg:doc">SRS</div>
-        </div>
+    <div class="tech-head">
+      <div class="section-label reveal">Skills</div>
+      <div class="about-heading reveal">
+        <span class="about-heading-dot"></span>
+        <h2>Tech <em>Stack</em></h2>
       </div>
-
-      <!-- Baris 2 (arah berlawanan) -->
-      <div class="marquee reverse">
-        <div class="marquee-group">
-          <div class="skill-badge" data-icon="dart">Dart</div>
-          <div class="skill-badge" data-icon="express">Express.js</div>
-          <div class="skill-badge" data-icon="scikitlearn">Scikit-learn</div>
-          <div class="skill-badge" data-icon="si:livewire">Livewire</div>
-          <div class="skill-badge" data-icon="github">GitHub</div>
-          <div class="skill-badge" data-icon="postgresql">PostgreSQL</div>
-          <div class="skill-badge" data-icon="pandas">Pandas</div>
-          <div class="skill-badge" data-icon="svg:api">REST API</div>
-          <div class="skill-badge" data-icon="si:jsonwebtokens">JWT</div>
-          <div class="skill-badge" data-icon="si:diagramsdotnet">draw.io</div>
-          <div class="skill-badge" data-icon="si:huggingface">IndoBERT</div>
-          <div class="skill-badge" data-icon="svg:db">ERD</div>
-          <div class="skill-badge" data-icon="svg:server">Laragon</div>
-          <div class="skill-badge" data-icon="svg:nlp">NLP</div>
-          <div class="skill-badge" data-icon="svg:workflow">UML</div>
-          <div class="skill-badge" data-icon="svg:sparkles">OpenRouter API</div>
-          <div class="skill-badge" data-icon="svg:network">Flowchart</div>
-          <div class="skill-badge" data-icon="svg:book">User Manual</div>
-        </div>
-      </div>
-
     </div>
+  </div>
+  <div class="tech-stage" id="tech-stage" role="list" aria-label="Tech stack">
+      <article class="tech-card" role="listitem" style="--glow:#A3AE63">
+        <div class="tc-top"><span>01 / 16</span><i class="tc-dot"></i></div>
+        <div class="tc-logo"><img src="image/tech/react.webp" alt="React" width="96" height="96" loading="lazy" draggable="false"></div>
+        <div class="tc-info"><h3>React</h3><p>Frontend Library</p></div>
+      </article>
+      <article class="tech-card" role="listitem" style="--glow:#EB8197">
+        <div class="tc-top"><span>02 / 16</span><i class="tc-dot"></i></div>
+        <div class="tc-logo"><img src="image/tech/js.webp" alt="JavaScript" width="96" height="96" loading="lazy" draggable="false"></div>
+        <div class="tc-info"><h3>JavaScript</h3><p>Programming Language</p></div>
+      </article>
+      <article class="tech-card" role="listitem" style="--glow:#A3AE63">
+        <div class="tc-top"><span>03 / 16</span><i class="tc-dot"></i></div>
+        <div class="tc-logo"><img src="image/tech/php.webp" alt="PHP" width="96" height="96" loading="lazy" draggable="false"></div>
+        <div class="tc-info"><h3>PHP</h3><p>Backend Language</p></div>
+      </article>
+      <article class="tech-card" role="listitem" style="--glow:#EB8197">
+        <div class="tc-top"><span>04 / 16</span><i class="tc-dot"></i></div>
+        <div class="tc-logo"><img src="image/tech/python.webp" alt="Python" width="96" height="96" loading="lazy" draggable="false"></div>
+        <div class="tc-info"><h3>Python</h3><p>Programming Language</p></div>
+      </article>
+      <article class="tech-card" role="listitem" style="--glow:#A3AE63">
+        <div class="tc-top"><span>05 / 16</span><i class="tc-dot"></i></div>
+        <div class="tc-logo"><img src="image/tech/node.webp" alt="Node.js" width="96" height="96" loading="lazy" draggable="false"></div>
+        <div class="tc-info"><h3>Node.js</h3><p>Runtime Environment</p></div>
+      </article>
+      <article class="tech-card" role="listitem" style="--glow:#EB8197">
+        <div class="tc-top"><span>06 / 16</span><i class="tc-dot"></i></div>
+        <div class="tc-logo"><img src="image/tech/laravel.webp" alt="Laravel" width="96" height="96" loading="lazy" draggable="false"></div>
+        <div class="tc-info"><h3>Laravel</h3><p>PHP Framework</p></div>
+      </article>
+      <article class="tech-card" role="listitem" style="--glow:#A3AE63">
+        <div class="tc-top"><span>07 / 16</span><i class="tc-dot"></i></div>
+        <div class="tc-logo"><img src="image/tech/flutter.webp" alt="Flutter" width="96" height="96" loading="lazy" draggable="false"></div>
+        <div class="tc-info"><h3>Flutter</h3><p>Mobile Framework</p></div>
+      </article>
+      <article class="tech-card" role="listitem" style="--glow:#EB8197">
+        <div class="tc-top"><span>08 / 16</span><i class="tc-dot"></i></div>
+        <div class="tc-logo"><img src="image/tech/firebase.webp" alt="Firebase" width="96" height="96" loading="lazy" draggable="false"></div>
+        <div class="tc-info"><h3>Firebase</h3><p>Backend as a Service</p></div>
+      </article>
+      <article class="tech-card" role="listitem" style="--glow:#A3AE63">
+        <div class="tc-top"><span>09 / 16</span><i class="tc-dot"></i></div>
+        <div class="tc-logo"><img src="image/tech/flask.webp" alt="Flask" width="96" height="96" loading="lazy" draggable="false"></div>
+        <div class="tc-info"><h3>Flask</h3><p>Python Micro-framework</p></div>
+      </article>
+      <article class="tech-card" role="listitem" style="--glow:#EB8197">
+        <div class="tc-top"><span>10 / 16</span><i class="tc-dot"></i></div>
+        <div class="tc-logo"><img src="image/tech/postgresql.webp" alt="PostgreSQL" width="96" height="96" loading="lazy" draggable="false"></div>
+        <div class="tc-info"><h3>PostgreSQL</h3><p>Relational Database</p></div>
+      </article>
+      <article class="tech-card" role="listitem" style="--glow:#A3AE63">
+        <div class="tc-top"><span>11 / 16</span><i class="tc-dot"></i></div>
+        <div class="tc-logo"><img src="image/tech/mysql.webp" alt="MySQL" width="96" height="96" loading="lazy" draggable="false"></div>
+        <div class="tc-info"><h3>MySQL</h3><p>Relational Database</p></div>
+      </article>
+      <article class="tech-card" role="listitem" style="--glow:#EB8197">
+        <div class="tc-top"><span>12 / 16</span><i class="tc-dot"></i></div>
+        <div class="tc-logo"><img src="image/tech/supabase.webp" alt="Supabase" width="96" height="96" loading="lazy" draggable="false"></div>
+        <div class="tc-info"><h3>Supabase</h3><p>Open-source BaaS</p></div>
+      </article>
+      <article class="tech-card" role="listitem" style="--glow:#A3AE63">
+        <div class="tc-top"><span>13 / 16</span><i class="tc-dot"></i></div>
+        <div class="tc-logo"><img src="image/tech/git.webp" alt="Git" width="96" height="96" loading="lazy" draggable="false"></div>
+        <div class="tc-info"><h3>Git</h3><p>Version Control</p></div>
+      </article>
+      <article class="tech-card" role="listitem" style="--glow:#EB8197">
+        <div class="tc-top"><span>14 / 16</span><i class="tc-dot"></i></div>
+        <div class="tc-logo"><img src="image/tech/github.webp" alt="GitHub" width="96" height="96" loading="lazy" draggable="false"></div>
+        <div class="tc-info"><h3>GitHub</h3><p>Code Hosting</p></div>
+      </article>
+      <article class="tech-card" role="listitem" style="--glow:#A3AE63">
+        <div class="tc-top"><span>15 / 16</span><i class="tc-dot"></i></div>
+        <div class="tc-logo"><img src="image/tech/docker.webp" alt="Docker" width="96" height="96" loading="lazy" draggable="false"></div>
+        <div class="tc-info"><h3>Docker</h3><p>Containerization</p></div>
+      </article>
+      <article class="tech-card" role="listitem" style="--glow:#EB8197">
+        <div class="tc-top"><span>16 / 16</span><i class="tc-dot"></i></div>
+        <div class="tc-logo"><img src="image/tech/postman.webp" alt="Postman" width="96" height="96" loading="lazy" draggable="false"></div>
+        <div class="tc-info"><h3>Postman</h3><p>API Testing</p></div>
+      </article>
   </div>
 </section>
 
 <section id="projects">
   <div class="wrap">
-    <div class="section-label reveal">Portfolio</div>
-    <div class="section-title reveal">Things I've Built</div>
-    <div class="section-desc reveal">Pick a category below to see the projects most relevant to you.</div>
-
-    <div class="filter-bar reveal" id="filter-bar">
-      <div class="filter-highlight" id="filter-highlight"></div>
-      <button class="filter-pill active" data-filter="all">All</button>
-      <button class="filter-pill" data-filter="ml">AI & Machine Learning</button>
-      <button class="filter-pill" data-filter="website">Website</button>
-      <button class="filter-pill" data-filter="mobile">Mobile App</button>
-      <button class="filter-pill" data-filter="design">System Design</button>
-      <button class="filter-pill" data-filter="docs">Documentation & Technical Writing</button>
+    <div class="folders-wrap reveal">
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true"><clipPath id="tab-clip" clipPathUnits="objectBoundingBox"><path d="M0,1 L0.075,0.30 C0.085,0.10 0.11,0 0.16,0 L0.84,0 C0.89,0 0.915,0.10 0.925,0.30 L1,1 Z"/></clipPath></svg>
+      <div class="folders" id="folders">
+      <div class="folder" data-cat="docs" style="--pos:0">
+        <button type="button" class="folder-tab" aria-expanded="false">Documentation</button>
+        <div class="folder-body">
+          <div class="folder-content"><div class="polaroids"></div></div>
+        </div>
+      </div>
+      <div class="folder" data-cat="design" style="--pos:1">
+        <button type="button" class="folder-tab" aria-expanded="false">System Design</button>
+        <div class="folder-body">
+          <div class="folder-content"><div class="polaroids"></div></div>
+        </div>
+      </div>
+      <div class="folder" data-cat="ml" style="--pos:2">
+        <button type="button" class="folder-tab" aria-expanded="false">AI &amp; ML</button>
+        <div class="folder-body">
+          <div class="folder-content"><div class="polaroids"></div></div>
+        </div>
+      </div>
+      <div class="folder" data-cat="software" style="--pos:3">
+        <button type="button" class="folder-tab" aria-expanded="false">Software</button>
+        <div class="folder-body">
+          <h2 class="folder-cover"><span class="cover-main">Portfolio</span><span class="cover-script">Things I've Built Proudly</span></h2>
+          <div class="folder-content"><div class="polaroids"></div></div>
+        </div>
+      </div>
+      </div>
     </div>
 
-    <div class="projects-grid" id="projects-grid">
+    <!-- sumber data project (dipakai untuk membuat polaroid, tidak ditampilkan) -->
+    <div class="projects-grid projects-source" id="projects-grid" aria-hidden="true">
 
         <div class="project-card reveal" data-cat="website">
         <div class="project-thumb" onclick="openLightbox('','Mini Clinic Information System')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#A2A66E,#7A7E43)">
             <span class="thumb-code"><img src="image/27.png" alt="Mini Clinic Information System."></span>
           </div>
         </div>
@@ -220,7 +303,7 @@
         <!-- ML.01 -->
       <div class="project-card reveal" data-cat="website">
         <div class="project-thumb" onclick="openLightbox('','driftnotes.')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#A2A66E,#7A7E43)">
             <span class="thumb-code"><img src="image/26.png" alt="driftnotes."></span>
           </div>
         </div>
@@ -244,7 +327,7 @@ Key features: User authentication with JWT (register & login),  Full CRUD suppor
       <!-- ML.01 -->
       <div class="project-card reveal" data-cat="ml">
         <div class="project-thumb" onclick="openLightbox('','Website-Based Chatbot Using IndoBERT for 5-Digit KBLI Code Prediction for SMEs')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#A2A66E,#7A7E43)">
             <span class="thumb-code"><img src="image/1.jpg" alt="Chatbot KBLI IndoBERT"></span>
           </div>
         </div>
@@ -266,7 +349,7 @@ Key features: User authentication with JWT (register & login),  Full CRUD suppor
        <!-- ML.04 -->
       <div class="project-card reveal" data-cat="ml">
         <div class="project-thumb" onclick="openLightbox('','Building AI Agents with n8n (Collaborative Project)')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#A2A66E,#7A7E43)">
             <span class="thumb-code"><img src="image/11.jpg" alt="Building AI Agents with n8n"></span>
           </div>
         </div>
@@ -295,7 +378,7 @@ Key features: User authentication with JWT (register & login),  Full CRUD suppor
       <!-- ML.03 -->
       <div class="project-card reveal" data-cat="ml">
         <div class="project-thumb" onclick="openLightbox('','Sentiment Analysis - Implementation of SMOTE-Enhanced Naive Bayes for Sentiment Analysis of Genocide in Palestinian on Twitter')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#FFC857,#E08A1E)">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#E8A85E,#C98A3F)">
             <span class="thumb-code"><img src="image/3.jpg" alt="Sentiment Analysis Palestine"></span>
           </div>
         </div>
@@ -324,7 +407,7 @@ Key features: User authentication with JWT (register & login),  Full CRUD suppor
       <!-- ML.04 -->
       <div class="project-card reveal" data-cat="ml">
         <div class="project-thumb" onclick="openLightbox('','Sentiment Analysis - Optimizing Naive Bayes with SMOTE for Sentiment Analysis of the 2024 Indonesian Presidential Inauguration on X')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#FFC857,#E08A1E)">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#E8A85E,#C98A3F)">
             <span class="thumb-code"><img src="image/8.jpg" alt="Sentiment Analysis Presidential Inauguration"></span>
           </div>
         </div>
@@ -353,7 +436,7 @@ Key features: User authentication with JWT (register & login),  Full CRUD suppor
       <!-- BE -->
       <div class="project-card reveal" data-cat="website">
         <div class="project-thumb" onclick="openLightbox('','SIMPAN - Government Knowledge Management System')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#EB8197,#C95F78)">
             <span class="thumb-code"><img src="image/5.jpg" alt="SIMPAN"></span>
           </div>
         </div>
@@ -375,7 +458,7 @@ Key features: User authentication with JWT (register & login),  Full CRUD suppor
        <!-- SYS.01a -->
       <div class="project-card reveal" data-cat="design">
         <div class="project-thumb" onclick="openLightbox('','System Design for SIMPAN')">
-           <div class="thumb-art" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
+           <div class="thumb-art" style="background:linear-gradient(135deg,#EB8197,#C95F78)">
             <span class="thumb-code"><img src="image/4.jpg" alt="System Design for SIMPAN"></span>
           </div>
         </div>
@@ -398,7 +481,7 @@ Key features: User authentication with JWT (register & login),  Full CRUD suppor
       <!-- BE -->
       <div class="project-card reveal" data-cat="website">
         <div class="project-thumb" onclick="openLightbox('','SI PERIKSA - Complaint Management System')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#EB8197,#C95F78)">
             <span class="thumb-code"><img src="image/6.jpg" alt="SI PERIKSA"></span>
           </div>
         </div>
@@ -420,7 +503,7 @@ Key features: User authentication with JWT (register & login),  Full CRUD suppor
       <!-- SYS.02a -->
       <div class="project-card reveal" data-cat="design">
         <div class="project-thumb" onclick="openLightbox('','System Design for SI Periksa')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#A2A66E,#7A7E43)">
             <span class="thumb-code"><img src="image/7.jpg" alt="System Design for SI Periksa"></span>
           </div>
         </div>
@@ -443,7 +526,7 @@ Key features: User authentication with JWT (register & login),  Full CRUD suppor
       <!-- APP.01 -->
       <div class="project-card reveal" data-cat="mobile">
         <div class="project-thumb" onclick="openLightbox('','XMANAH - Info App for Perantau')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#A2A66E,#7A7E43)">
             <span class="thumb-code"><img src="image/10.jpg" alt="XMANAH"></span>
           </div>
         </div>
@@ -465,7 +548,7 @@ Key features: User authentication with JWT (register & login),  Full CRUD suppor
        <!-- SYS.03a -->
       <div class="project-card reveal" data-cat="design">
         <div class="project-thumb" onclick="openLightbox('','System Design for XMANAH')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#A2A66E,#7A7E43)">
             <span class="thumb-code"><img src="image/9.jpg" alt="System Design for XMANAH"></span>
           </div>
         </div>
@@ -487,7 +570,7 @@ Key features: User authentication with JWT (register & login),  Full CRUD suppor
       <!-- SYS.06 -->
       <div class="project-card reveal" data-cat="website">
         <div class="project-thumb" onclick="openLightbox('','Employee Management ERP')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#EB8197,#C95F78)">
             <span class="thumb-code"><img src="image/12.jpg" alt="Employee Management ERP"></span>
           </div>
         </div>
@@ -509,7 +592,7 @@ Key features: User authentication with JWT (register & login),  Full CRUD suppor
       <!-- Static Website -->
       <div class="project-card reveal" data-cat="website">
         <div class="project-thumb" onclick="openLightbox('','Cooking Kita')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#EB8197,#C95F78)">
             <span class="thumb-code"><img src="image/2.jpg" alt="Cooking Kita"></span>
           </div>
         </div>
@@ -531,7 +614,7 @@ Key features: User authentication with JWT (register & login),  Full CRUD suppor
       <!-- Portfolio -->
       <div class="project-card reveal" data-cat="website">
         <div class="project-thumb" onclick="openLightbox('','Muthia Khanza Portfolio Website')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#EB8197,#C95F78)">
             <span class="thumb-code"><img src="image/24.png" alt="Muthia Khanza Portfolio Website"></span>
           </div>
         </div>
@@ -553,7 +636,7 @@ Key features: User authentication with JWT (register & login),  Full CRUD suppor
       <!-- docs -->
        <div class="project-card reveal" data-cat="docs">
         <div class="project-thumb" onclick="openLightbox('','Building AI Agents with n8n (Collaborative Project)')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#A2A66E,#7A7E43)">
             <span class="thumb-code"><img src="image/11.jpg" alt="Building AI Agents with n8n"></span>
           </div>
         </div>
@@ -584,7 +667,7 @@ Key features: User authentication with JWT (register & login),  Full CRUD suppor
 
       <div class="project-card reveal" data-cat="docs">
         <div class="project-thumb" onclick="openLightbox('','SIMPAN User Manual')">
-          <div class="thumb-art" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
+          <div class="thumb-art" style="background:linear-gradient(135deg,#A2A66E,#7A7E43)">
             <span class="thumb-code"><img src="image/25.jpg" alt="SIMPAN User Manual"></span>
           </div>
         </div>
@@ -617,103 +700,115 @@ Key features: User authentication with JWT (register & login),  Full CRUD suppor
 
 <section id="experience" class="skills-section">
   <div class="wrap">
-    <div class="section-label reveal">Experience</div>
-    <div class="section-title reveal">Where I've Worked</div>
-    <div class="section-desc reveal">Two government internships, two systems that are actually in use.</div>
+    <div class="tech-head">
+      <div class="section-label reveal">Experience</div>
+      <div class="about-heading reveal">
+        <span class="about-heading-dot"></span>
+        <h2>Where I've <em>Worked</em></h2>
+      </div>
+      <div class="section-desc reveal">Two government internships, two systems that are actually in use.</div>
+    </div>
 
     <div class="exp-list">
       <div class="exp-card reveal">
-        <div class="exp-rail"><div class="exp-dot"></div></div>
-        <div>
+        <div class="exp-body">
           <div class="exp-media" onclick="openLightbox('image/16.jpg','Statistics Indonesia (BPS) - Tasikmalaya City')">
             <img src="image/16.jpg" alt="Statistics Indonesia (BPS) - Tasikmalaya City" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="exp-media-fallback" style="background:linear-gradient(135deg,#FF5FA2,#C9338E)">
+            <div class="exp-media-fallback" style="background:linear-gradient(135deg,#EB8197,#C95F78)">
               <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
               <span>BPS Tasikmalaya City</span>
             </div>
           </div>
+          <div class="exp-note"><img class="exp-clip" src="image/clip.png" alt="" draggable="false">
           <div class="exp-period">JUL 2025 – SEP 2025</div>
           <div class="exp-role">Data Scientist Intern</div>
           <div class="exp-company">Statistics Indonesia (BPS) - Tasikmalaya City</div>
           <ul class="exp-items">
-            <li>Built an AI chatbot for KBLI classification with 95% accuracy to support the Desa Cantik program</li>
+            <li>Built an AI chatbot for KBLI classification with <mark>95% accuracy</mark> to support the Desa Cantik program</li>
             <li>Processed and visualized large-scale regional statistical data for official BPS publications</li>
-            <li>Helped prepare data for the 2026 Economic Census - verifying thousands of business records</li>
+            <li>Helped prepare data for the 2026 Economic Census - verifying <mark>thousands of business records</mark></li>
           </ul>
+          </div>
         </div>
       </div>
 
       <div class="exp-card reveal">
-        <div class="exp-rail"><div class="exp-dot"></div></div>
-        <div>
+        <div class="exp-body">
           <div class="exp-media" onclick="openLightbox('image/15.jpg','Department of Communication & Informatics - Tasikmalaya City')">
             <img src="image/15.jpg" alt="Department of Communication & Informatics - Tasikmalaya City" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="exp-media-fallback" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
+            <div class="exp-media-fallback" style="background:linear-gradient(135deg,#EB8197,#C95F78)">
               <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 4v16"/></svg>
               <span>Diskominfo Tasikmalaya</span>
             </div>
           </div>
+          <div class="exp-note"><img class="exp-clip" src="image/clip.png" alt="" draggable="false">
           <div class="exp-period">JUL 2024 – AUG 2024</div>
           <div class="exp-role">Backend Developer & Data Scientist Intern</div>
           <div class="exp-company">Department of Communication & Informatics - Tasikmalaya City</div>
           <ul class="exp-items">
-            <li>Built SIMPAN - a government KMS now used by 3-5 divisions at Diskominfo</li>
-            <li>Improved internal content management efficiency by 40-50% through full CRUD development</li>
+            <li>Built SIMPAN - a government KMS now used by <mark>3-5 divisions</mark> at Diskominfo</li>
+            <li>Improved internal content management efficiency by <mark>40-50%</mark> through full CRUD development</li>
             <li>Built with Laravel & Livewire; contributed to the SPBE (e-government) architecture</li>
           </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div style="margin-top:3.4rem">
-      <div class="section-label reveal" style="margin-bottom:1rem">Beyond Coding</div>
+    <div class="scrap-block scrap-board scrap-wide">
+      <img class="board-flower" src="image/flower-solo.webp" alt="" draggable="false">
+      <div class="scrap-label reveal">Beyond Coding</div>
       <div class="org-grid">
-        <div class="org-card reveal">
+        <div class="org-card note note-pink reveal">
+          <span class="tape"></span>
           <div class="org-media" onclick="openLightbox('image/17.jpg','Soedirman Technophoria (S-TECH) 2023')">
             <img src="image/17.jpg" alt="Soedirman Technophoria (S-TECH) 2023" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="org-media-fallback" style="background:linear-gradient(135deg,#FFC857,#E08A1E)">
+            <div class="org-media-fallback" style="background:linear-gradient(135deg,#E8A85E,#C98A3F)">
               <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>
             </div>
           </div>
           <div class="org-role">Vice Chief Executive</div>
           <div class="org-org">Soedirman Technophoria (S-TECH) 2023</div>
           <div class="org-period">SEP – NOV 2023</div>
-          <div class="org-desc">Led 30+ members, organized a Web Programming Competition & UI/UX Seminar with 100+ participants.</div>
+          <div class="org-desc">Led <mark>30+ members</mark>, organized a Web Programming Competition & UI/UX Seminar with <mark>100+ participants</mark>.</div>
         </div>
-        <div class="org-card reveal">
+        <div class="org-card note note-cream reveal">
+          <span class="tape"></span>
           <div class="org-media" onclick="openLightbox('image/18.jpg','HMIF UNSOED')">
             <img src="image/18.jpg" alt="HMIF UNSOED" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="org-media-fallback" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
+            <div class="org-media-fallback" style="background:linear-gradient(135deg,#A2A66E,#7A7E43)">
               <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="9" cy="7" r="3"/><path d="M2 21v-1a6 6 0 0 1 6-6"/><circle cx="17" cy="9" r="2.5"/><path d="M14 21v-1a5 5 0 0 1 8-4"/></svg>
             </div>
           </div>
           <div class="org-role">ILTEK Division Staff</div>
           <div class="org-org">HMIF UNSOED</div>
           <div class="org-period">MAR 2023 – JAN 2024</div>
-          <div class="org-desc">Supported Soedirman Technophoria 2023, keeping 90%+ of programs running on schedule.</div>
+          <div class="org-desc">Supported Soedirman Technophoria 2023, keeping <mark>90%+</mark> of programs running on schedule.</div>
         </div>
-        <div class="org-card reveal">
+        <div class="org-card note note-sage reveal">
+          <span class="tape"></span>
           <div class="org-media" onclick="openLightbox('image/19.jpg','Informatics Orientation Program')">
             <img src="image/19.jpg" alt="Informatics Orientation Program" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="org-media-fallback" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
+            <div class="org-media-fallback" style="background:linear-gradient(135deg,#EB8197,#C95F78)">
               <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
             </div>
           </div>
           <div class="org-role">Group Mentor</div>
           <div class="org-org">Informatics Orientation Program</div>
           <div class="org-period">AUG – DEC 2024</div>
-          <div class="org-desc">Mentored ~20 new students in adjusting to academic and social life at UNSOED.</div>
+          <div class="org-desc">Mentored <mark>~20 new students</mark> in adjusting to academic and social life at UNSOED.</div>
         </div>
       </div>
     </div>
 
-    <div style="margin-top:3.4rem">
-      <div class="section-label reveal" style="margin-bottom:1rem">Certifications &amp; Achievements</div>
+    <div class="scrap-block scrap-wide">
+      <div class="scrap-label is-sage reveal">Certifications &amp; Achievements</div>
       <div class="org-grid cred-grid">
-        <div class="org-card reveal">
+        <div class="org-card cred-card cred-train reveal">
+          <span class="pin"></span>
           <div class="org-media" onclick="openLightbox('image/21.png','Data Science Training - Sinau Jogja')">
             <img src="image/21.png" alt="Data Science Training - Sinau Jogja" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="org-media-fallback" style="background:linear-gradient(135deg,#22D3EE,#1699B0)">
+            <div class="org-media-fallback" style="background:linear-gradient(135deg,#A2A66E,#7A7E43)">
               <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
             </div>
           </div>
@@ -721,10 +816,11 @@ Key features: User authentication with JWT (register & login),  Full CRUD suppor
           <div class="org-org">Sinau Jogja</div>
           <div class="org-period">2025</div>
         </div>
-        <div class="org-card reveal">
+        <div class="org-card cred-card cred-train reveal">
+          <span class="pin"></span>
           <div class="org-media" onclick="openLightbox('image/20.png','Machine Learning Bootcamp - Special Skill Indonesia')">
             <img src="image/20.png  " alt="Machine Learning Bootcamp - Special Skill Indonesia" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="org-media-fallback" style="background:linear-gradient(135deg,#7C5CFC,#4B2FD9)">
+            <div class="org-media-fallback" style="background:linear-gradient(135deg,#EB8197,#C95F78)">
               <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
             </div>
           </div>
@@ -732,10 +828,11 @@ Key features: User authentication with JWT (register & login),  Full CRUD suppor
           <div class="org-org">Special Skill Indonesia</div>
           <div class="org-period">2025</div>
         </div>
-        <div class="org-card reveal">
+        <div class="org-card cred-card cred-finalist reveal">
+          <span class="pin"></span><span class="rosette" aria-hidden="true">★</span>
           <div class="org-media" onclick="openLightbox('image/23.png','Finalist - PKM Rector Cup IV')">
             <img src="image/23.png" alt="Finalist - PKM Rector Cup IV" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="org-media-fallback" style="background:linear-gradient(135deg,#FFC857,#E08A1E)">
+            <div class="org-media-fallback" style="background:linear-gradient(135deg,#E8A85E,#C98A3F)">
               <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>
             </div>
           </div>
@@ -743,10 +840,11 @@ Key features: User authentication with JWT (register & login),  Full CRUD suppor
           <div class="org-org">Website-Based Sign Language Translator System</div>
           <div class="org-period">2024</div>
         </div>
-        <!-- <div class="org-card reveal">
+        <!-- <div class="org-card cred-card cred-finalist reveal">
+          <span class="pin"></span><span class="rosette" aria-hidden="true">★</span>
           <div class="org-media" onclick="openLightbox('image/23.png','Finalist - LIDM Student Digital Innovation Competition')">
             <img src="image/23.png" alt="Finalist - LIDM Student Digital Innovation Competition" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="org-media-fallback" style="background:linear-gradient(135deg,#FF5FA2,#C9338E)">
+            <div class="org-media-fallback" style="background:linear-gradient(135deg,#EB8197,#C95F78)">
               <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>
             </div>
           </div>
@@ -754,10 +852,11 @@ Key features: User authentication with JWT (register & login),  Full CRUD suppor
           <div class="org-org">Website-Based Sign Language Translator System</div>
           <div class="org-period">2024</div>
         </div> -->
-        <div class="org-card reveal">
+        <div class="org-card cred-card cred-finalist reveal">
+          <span class="pin"></span><span class="rosette" aria-hidden="true">★</span>
           <div class="org-media" onclick="openLightbox('image/22.png','Finalist - Gelora PKM Fakultas Teknik')">
             <img src="image/22.png" alt="Finalist - Gelora PKM Fakultas Teknik" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="org-media-fallback" style="background:linear-gradient(135deg,#1FE0A6,#0FA37D)">
+            <div class="org-media-fallback" style="background:linear-gradient(135deg,#A2A66E,#7A7E43)">
               <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>
             </div>
           </div>
@@ -772,26 +871,28 @@ Key features: User authentication with JWT (register & login),  Full CRUD suppor
 
 <section id="contact" class="contact-section">
   <div class="contact-wrap reveal">
-    <div>
+    <svg class="contact-dots" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMin slice" aria-hidden="true"><circle cx="1030" cy="202" r="40"/><circle cx="609" cy="254" r="40"/><circle cx="237" cy="70" r="48"/><circle cx="943" cy="199" r="48"/><circle cx="537" cy="145" r="22"/><circle cx="757" cy="180" r="58"/><circle cx="1165" cy="264" r="48"/><circle cx="776" cy="60" r="48"/><circle cx="32" cy="64" r="48"/><circle cx="1049" cy="12" r="28"/><circle cx="50" cy="195" r="48"/><circle cx="766" cy="274" r="28"/><circle cx="1185" cy="356" r="40"/><circle cx="313" cy="10" r="58"/><circle cx="1011" cy="354" r="22"/><circle cx="257" cy="177" r="28"/><circle cx="679" cy="89" r="22"/><circle cx="113" cy="264" r="34"/><circle cx="28" cy="356" r="34"/><circle cx="300" cy="225" r="28"/><circle cx="475" cy="6" r="22"/><circle cx="1146" cy="0" r="68"/><circle cx="21" cy="269" r="34"/><circle cx="307" cy="124" r="48"/><circle cx="196" cy="163" r="28"/><circle cx="1124" cy="171" r="58"/><circle cx="615" cy="41" r="22"/><circle cx="670" cy="154" r="40"/><circle cx="436" cy="97" r="22"/><circle cx="32" cy="140" r="22"/></svg>
+    <img class="flower flower-duo" src="image/flower-duo.webp" alt="" draggable="false">
+    <img class="flower flower-solo" src="image/flower-solo.webp" alt="" draggable="false">
+    <div class="contact-inner">
       <h2>Let's talk.</h2>
       <p>I'm open to fullstack developer, data scientist, or ML engineer roles. If we sound like a good fit, don't hesitate to reach out!</p>
+      <div class="contact-links">
+        <a href="mailto:muthiakhanza034@gmail.com" class="contact-link contact-link-main">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          muthiakhanza034@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/muthia-khanza" target="_blank" class="contact-link">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          linkedin.com/in/muthia-khanza
+        </a>
+      </div>
     </div>
-    <div class="contact-links">
-      <a href="mailto:muthiakhanza034@gmail.com" class="contact-link">
-        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        muthiakhanza034@gmail.com
-      </a>
-      <a href="https://www.linkedin.com/in/muthia-khanza" target="_blank" class="contact-link">
-        <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-        linkedin.com/in/muthia-khanza
-      </a>
-    </div>
+    <footer class="contact-foot">
+      <p>© 2026 MUTHIA KHANZA - INDONESIA</p>
+    </footer>
   </div>
 </section>
-
-<footer>
-  <p>© 2026 MUTHIA KHANZA - INDONESIA</p>
-</footer>
 
 <script src="script.js"></script>
 </body>
